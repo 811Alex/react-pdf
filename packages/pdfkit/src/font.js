@@ -3,6 +3,29 @@ import createStandardFont from './font/standard.js';
 import createEmbeddedFont from './font/embedded.js';
 
 export class PDFFont {
+  constructor() {
+    /**
+     * @type {any}
+     */
+    this.document = null;
+    /**
+     * @type {number | null}
+     */
+    this.ascender = null;
+    /**
+     * @type {number | null}
+     */
+    this.descender = null;
+    /**
+     * @type {number[] | null}
+     */
+    this.bbox = null;
+    /**
+     * @type {number | null}
+     */
+    this.lineGap = null;
+  }
+
   static open(document, src, family, id) {
     let font;
 

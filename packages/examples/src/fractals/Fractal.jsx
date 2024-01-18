@@ -49,6 +49,9 @@ const Fractal = ({ steps, direction = 'column' }) => {
     return null;
   }
 
+  /**
+   * @satisfies {import('@react-pdf/types').Style}
+   */
   const fractalStyle = {
     flexGrow: 1,
     minWidth: 40,

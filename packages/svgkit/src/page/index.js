@@ -78,16 +78,22 @@ class SVGPage {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  setDefaultStyles() {}
+  setDefaultStyles() {
+    throw new Error('Must be implemented by subclass');
+  }
 
   // eslint-disable-next-line class-methods-use-this, no-unused-vars
-  applyStyleState(state) {}
+  applyStyleState(state) {
+    throw new Error('Must be implemented by subclass');
+  }
 
   // eslint-disable-next-line class-methods-use-this
-  getStyleState() {}
+  getStyleState() {
+    throw new Error('Must be implemented by subclass');
+  }
 }
 
-const mixin = (methods) => {
+const mixin = methods => {
   return (() => {
     const result = [];
     for (const name in methods) {

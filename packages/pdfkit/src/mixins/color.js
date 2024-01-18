@@ -117,6 +117,9 @@ export default {
   },
 
   _doOpacity(fillOpacity, strokeOpacity) {
+    /**
+     * @type {Object}
+     */
     let dictionary;
     let name;
     if (fillOpacity == null && strokeOpacity == null) {
@@ -154,10 +157,24 @@ export default {
     return this.addContent(`/${name} gs`);
   },
 
+  /**
+   * @param {number} x1
+   * @param {number} y1
+   * @param {number} x2
+   * @param {number} y2
+   */
   linearGradient(x1, y1, x2, y2) {
     return new PDFLinearGradient(this, x1, y1, x2, y2);
   },
 
+  /**
+   * @param {number} x1
+   * @param {number} y1
+   * @param {number} r1
+   * @param {number} x2
+   * @param {number} y2
+   * @param {number} r2
+   */
   radialGradient(x1, y1, r1, x2, y2, r2) {
     return new PDFRadialGradient(this, x1, y1, r1, x2, y2, r2);
   },
@@ -167,7 +184,7 @@ export default {
   }
 };
 
-var namedColors = {
+const namedColors = {
   aliceblue: [240, 248, 255],
   antiquewhite: [250, 235, 215],
   aqua: [0, 255, 255],

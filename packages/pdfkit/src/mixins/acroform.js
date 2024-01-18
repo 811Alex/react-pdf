@@ -178,6 +178,13 @@ export default {
     return this;
   },
 
+  /**
+   *
+   * @param {string} name
+   * @param {string} type
+   * @param {Object} options
+   * @returns {Object} field dictionary
+   */
   _fieldDict(name, type, options = {}) {
     if (!this._acroform) {
       throw new Error(
@@ -202,6 +209,10 @@ export default {
     return opts;
   },
 
+  /**
+   * @param {string} type
+   * @param {Object} opts
+   */
   _resolveType(type, opts) {
     if (type === 'text') {
       opts.FT = 'Tx';

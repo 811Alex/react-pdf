@@ -110,7 +110,7 @@ class PDFGradient {
 
     pattern.end();
 
-    if (this.stops.some((stop) => stop[2] < 1)) {
+    if (this.stops.some(stop => stop[2] < 1)) {
       let grad = this.opacityGradient();
       grad._colorSpace = 'DeviceGray';
 
@@ -204,9 +204,33 @@ class PDFGradient {
     const op = stroke ? 'SCN' : 'scn';
     return this.doc.addContent(`/${this.id} ${op}`);
   }
+
+  /**
+   * @param {Function} fn
+   * @returns {any} shader
+   */
+  // eslint-disable-next-line no-unused-vars
+  shader(fn) {
+    throw new Error('Must be implemented by subclass');
+  }
+
+  /**
+   * @returns {PDFGradient} opacity gradient
+   */
+  opacityGradient() {
+    throw new Error('Must be implemented by subclass');
+  }
 }
 
 class PDFLinearGradient extends PDFGradient {
+  /**
+   *
+   * @param {Object} doc
+   * @param {number} x1
+   * @param {number} y1
+   * @param {number} x2
+   * @param {number} y2
+   */
   constructor(doc, x1, y1, x2, y2) {
     super(doc);
     this.x1 = x1;
@@ -231,6 +255,16 @@ class PDFLinearGradient extends PDFGradient {
 }
 
 class PDFRadialGradient extends PDFGradient {
+  /**
+   *
+   * @param {Object} doc
+   * @param {number} x1
+   * @param {number} y1
+   * @param {number} r1
+   * @param {number} x2
+   * @param {number} y2
+   * @param {number} r2
+   */
   constructor(doc, x1, y1, r1, x2, y2, r2) {
     super(doc);
     this.doc = doc;

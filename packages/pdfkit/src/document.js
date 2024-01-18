@@ -49,6 +49,8 @@ class PDFDocument extends stream.Readable {
     this._pageBuffer = [];
     this._pageBufferStart = 0;
 
+    this._fontFamilies = {};
+
     // The PDF object store
     this._offsets = [];
     this._waiting = 0;
