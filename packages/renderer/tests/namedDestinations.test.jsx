@@ -1,11 +1,16 @@
+import path from 'node:path';
+import url from 'node:url';
 import { describe, expect, test } from 'vitest';
 
 import { Document, Font, Link, Page, Text, View } from '@react-pdf/renderer';
 import renderToImage from './renderComponent';
 
+const dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const latoRegular = path.resolve(dirname, './fonts/Lato-Regular.ttf');
+
 Font.register({
   family: 'Lato',
-  src: 'https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf',
+  src: latoRegular,
 });
 
 const Doc = () => (

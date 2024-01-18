@@ -1,3 +1,5 @@
+import path from 'node:path';
+import url from 'node:url';
 import { describe, expect, test } from 'vitest';
 
 import {
@@ -60,14 +62,18 @@ const styles = StyleSheet.create({
   },
 });
 
+const dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const oswald = path.resolve(dirname, './fonts/Oswald.ttf');
+const openSans = path.resolve(dirname, './fonts/OpenSans.ttf');
+
 Font.register({
   family: 'Oswald',
-  src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
+  src: oswald,
 });
 
 Font.register({
   family: 'Open Sans',
-  src: 'https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf',
+  src: openSans,
 });
 
 const Subtitle = ({ children, ...props }) => (

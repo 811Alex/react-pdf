@@ -1,4 +1,6 @@
 /* eslint-disable react/no-array-index-key */
+import path from 'node:path';
+import url from 'node:url';
 import { describe, expect, test } from 'vitest';
 
 import {
@@ -345,24 +347,30 @@ const resumeStyles = StyleSheet.create({
   },
 });
 
+const dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const openSans = path.resolve(dirname, './fonts/OpenSans.ttf');
+const latoRegular = path.resolve(dirname, './fonts/Lato-Regular.ttf');
+const latoBold = path.resolve(dirname, './fonts/Lato-Bold.ttf');
+const latoItalic = path.resolve(dirname, './fonts/Lato-Italic.ttf');
+
 Font.register({
   family: 'Open Sans',
-  src: 'https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf',
+  src: openSans,
 });
 
 Font.register({
   family: 'Lato',
-  src: 'https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf',
+  src: latoRegular,
 });
 
 Font.register({
   family: 'Lato Italic',
-  src: 'https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf',
+  src: latoItalic,
 });
 
 Font.register({
   family: 'Lato Bold',
-  src: 'https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf',
+  src: latoBold,
 });
 
 const Resume = (props) => (

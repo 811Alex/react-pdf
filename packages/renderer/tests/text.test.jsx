@@ -1,5 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/no-array-index-key */
+import path from 'node:path';
+import url from 'node:url';
 import { describe, expect, test } from 'vitest';
 
 import {
@@ -56,9 +58,12 @@ const styles = StyleSheet.create({
   },
 });
 
+const dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const oswald = path.resolve(dirname, './fonts/Oswald.ttf');
+
 Font.register({
   family: 'Oswald',
-  src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
+  src: oswald,
 });
 
 const TextTest = () => (

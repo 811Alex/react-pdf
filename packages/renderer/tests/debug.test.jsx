@@ -1,12 +1,16 @@
+import path from 'node:path';
+import url from 'node:url';
 import { describe, expect, test } from 'vitest';
 
 import { Document, Page, View, Text, Font } from '@react-pdf/renderer';
 import renderToImage from './renderComponent';
 
-// pdf.js does not render default fonts in node and I use Open Sans (:
+// pdf.js does not render default fonts in Node.js so we need to register one
+const dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const openSans = path.resolve(dirname, './fonts/OpenSans.ttf');
 Font.register({
   family: 'Open Sans',
-  src: 'https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf',
+  src: openSans,
 });
 
 describe('debug', () => {
