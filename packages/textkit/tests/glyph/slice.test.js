@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import slice from '../../src/glyph/slice';
-import font from '../internal/font';
+import slice from '../../src/glyph/slice.js';
+import font from '../internal/font.js';
 
 describe('glyph slice operator', () => {
   test('should return no glyph for empty slice', () => {

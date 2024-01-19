@@ -1,5 +1,5 @@
-import glyphIndexAt from './glyphIndexAt';
-import positionsAdvanceWidth from '../positions/advanceWidth';
+import glyphIndexAt from './glyphIndexAt.js';
+import positionsAdvanceWidth from '../positions/advanceWidth.js';
 
 /**
  * Advance width between two string indices

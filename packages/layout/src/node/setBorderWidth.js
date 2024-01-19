@@ -1,6 +1,6 @@
 import * as Yoga from 'yoga-layout';
 
-import setYogaValue from './setYogaValue';
+import setYogaValue from './setYogaValue.js';
 
 /**
  * @typedef {Function} NodeInstanceWrapper

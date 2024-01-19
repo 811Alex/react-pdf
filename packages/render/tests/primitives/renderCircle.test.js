@@ -2,10 +2,10 @@ import { describe, expect, test } from 'vitest';
 
 import * as P from '@react-pdf/primitives';
 
-import createCTX from '../ctx';
-import renderCircle from '../../src/primitives/renderCircle';
+import createCTX from '../ctx.js';
+import renderCircle from '../../src/primitives/renderCircle.js';
 
-const round = num => Math.round(num * 100) / 100;
+const round = (num) => Math.round(num * 100) / 100;
 
 describe('primitive renderCircle', () => {
   test('should render circle correctly', () => {
@@ -15,7 +15,7 @@ describe('primitive renderCircle', () => {
 
     renderCircle(ctx, node);
 
-    const bezierCalls = ctx.bezierCurveTo.mock.calls.map(c => c.map(round));
+    const bezierCalls = ctx.bezierCurveTo.mock.calls.map((c) => c.map(round));
 
     expect(bezierCalls).toHaveLength(4);
     expect(ctx.moveTo.mock.calls).toEqual([[30, 80]]);

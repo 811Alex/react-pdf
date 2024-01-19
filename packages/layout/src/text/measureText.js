@@ -2,9 +2,9 @@
 
 import * as Yoga from 'yoga-layout';
 
-import layoutText from './layoutText';
-import linesWidth from './linesWidth';
-import linesHeight from './linesHeight';
+import layoutText from './layoutText.js';
+import linesWidth from './linesWidth.js';
+import linesHeight from './linesHeight.js';
 
 const ALIGNMENT_FACTORS = { center: 0.5, right: 1 };
 

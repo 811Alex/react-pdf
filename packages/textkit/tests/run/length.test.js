@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import length from '../../src/run/length';
+import length from '../../src/run/length.js';
 
 describe('run length operator', () => {
   test('should be zero for empty run', () => {

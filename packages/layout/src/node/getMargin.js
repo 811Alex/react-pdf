@@ -11,7 +11,7 @@ const getComputedMargin = (node, edge) => {
  * @param {Object} node
  * @returns {{ marginTop: number, marginRight: number, marginBottom: number, marginLeft: number }} margins
  */
-const getMargin = (node) => {
+const getMargin = node => {
   const { style, box } = node;
 
   const marginTop =

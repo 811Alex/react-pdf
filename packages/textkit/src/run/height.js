@@ -1,6 +1,6 @@
-import ascent from './ascent';
-import descent from './descent';
-import lineGap from './lineGap';
+import ascent from './ascent.js';
+import descent from './descent.js';
+import lineGap from './lineGap.js';
 
 /**
  * Get run height
@@ -8,7 +8,7 @@ import lineGap from './lineGap';
  * @param {Object} run
  * @returns {number} height
  */
-const height = run => {
+const height = (run) => {
   const lineHeight = run.attributes?.lineHeight;
   return lineHeight || lineGap(run) + ascent(run) - descent(run);
 };

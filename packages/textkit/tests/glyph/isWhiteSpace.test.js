@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isWhiteSpace from '../../src/glyph/isWhiteSpace';
+import isWhiteSpace from '../../src/glyph/isWhiteSpace.js';
 
 describe('glyph isWhiteSpace operator', () => {
   test('should return false if no glyph provided', () => {

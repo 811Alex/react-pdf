@@ -1,6 +1,6 @@
 import * as fontkit from 'fontkit';
-import createStandardFont from './font/standard';
-import createEmbeddedFont from './font/embedded';
+import createStandardFont from './font/standard.js';
+import createEmbeddedFont from './font/embedded.js';
 
 export class PDFFont {
   static open(document, src, family, id) {

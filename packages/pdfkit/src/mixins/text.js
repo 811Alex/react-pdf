@@ -1,4 +1,4 @@
-import PDFObject from '../object';
+import PDFObject from '../object.js';
 
 const { number } = PDFObject;
 

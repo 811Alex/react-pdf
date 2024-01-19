@@ -2,7 +2,7 @@ import { describe, expect, test } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import getPadding from '../../src/node/getPadding';
+import getPadding from '../../src/node/getPadding.js';
 
 const getComputedPadding = value => {
   if (value === Yoga.Edge.Top) return 1;

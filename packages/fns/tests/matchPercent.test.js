@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import matchPercent from '../src/matchPercent';
+import matchPercent from '../src/matchPercent.js';
 
 describe('match percent', () => {
   test('should return null for null input', () => {

@@ -1,48 +1,48 @@
 import * as P from '@react-pdf/primitives';
 import { isNil, compose } from '@react-pdf/fns';
 
-import getMargin from '../node/getMargin';
-import getPadding from '../node/getPadding';
-import getPosition from '../node/getPosition';
-import getDimension from '../node/getDimension';
-import getBorderWidth from '../node/getBorderWidth';
-import setDisplay from '../node/setDisplay';
-import setOverflow from '../node/setOverflow';
-import setFlexWrap from '../node/setFlexWrap';
-import setFlexGrow from '../node/setFlexGrow';
-import setFlexBasis from '../node/setFlexBasis';
-import setAlignSelf from '../node/setAlignSelf';
-import setAlignItems from '../node/setAlignItems';
-import setFlexShrink from '../node/setFlexShrink';
-import setAspectRatio from '../node/setAspectRatio';
-import setAlignContent from '../node/setAlignContent';
-import setPositionType from '../node/setPositionType';
-import setFlexDirection from '../node/setFlexDirection';
-import setJustifyContent from '../node/setJustifyContent';
+import getMargin from '../node/getMargin.js';
+import getPadding from '../node/getPadding.js';
+import getPosition from '../node/getPosition.js';
+import getDimension from '../node/getDimension.js';
+import getBorderWidth from '../node/getBorderWidth.js';
+import setDisplay from '../node/setDisplay.js';
+import setOverflow from '../node/setOverflow.js';
+import setFlexWrap from '../node/setFlexWrap.js';
+import setFlexGrow from '../node/setFlexGrow.js';
+import setFlexBasis from '../node/setFlexBasis.js';
+import setAlignSelf from '../node/setAlignSelf.js';
+import setAlignItems from '../node/setAlignItems.js';
+import setFlexShrink from '../node/setFlexShrink.js';
+import setAspectRatio from '../node/setAspectRatio.js';
+import setAlignContent from '../node/setAlignContent.js';
+import setPositionType from '../node/setPositionType.js';
+import setFlexDirection from '../node/setFlexDirection.js';
+import setJustifyContent from '../node/setJustifyContent.js';
 import {
   setMarginTop,
   setMarginRight,
   setMarginBottom,
   setMarginLeft,
-} from '../node/setMargin';
+} from '../node/setMargin.js';
 import {
   setPaddingTop,
   setPaddingRight,
   setPaddingBottom,
   setPaddingLeft,
-} from '../node/setPadding';
+} from '../node/setPadding.js';
 import {
   setBorderTop,
   setBorderRight,
   setBorderBottom,
   setBorderLeft,
-} from '../node/setBorderWidth';
+} from '../node/setBorderWidth.js';
 import {
   setPositionTop,
   setPositionRight,
   setPositionBottom,
   setPositionLeft,
-} from '../node/setPosition';
+} from '../node/setPosition.js';
 import {
   setWidth,
   setHeight,
@@ -50,12 +50,12 @@ import {
   setMaxWidth,
   setMinHeight,
   setMaxHeight,
-} from '../node/setDimension';
-import { setRowGap, setColumnGap } from '../node/setGap';
-import measureSvg from '../svg/measureSvg';
-import measureText from '../text/measureText';
-import measureImage from '../image/measureImage';
-import measureCanvas from '../canvas/measureCanvas';
+} from '../node/setDimension.js';
+import { setRowGap, setColumnGap } from '../node/setGap.js';
+import measureSvg from '../svg/measureSvg.js';
+import measureText from '../text/measureText.js';
+import measureImage from '../image/measureImage.js';
+import measureCanvas from '../canvas/measureCanvas.js';
 
 const isType = type => node => node.type === type;
 

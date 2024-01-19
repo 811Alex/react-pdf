@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import splitParagraphs from '../../src/layout/splitParagraphs';
-import fromFragments from '../../src/attributedString/fromFragments';
+import splitParagraphs from '../../src/layout/splitParagraphs.js';
+import fromFragments from '../../src/attributedString/fromFragments.js';
 
 const splitParagraphsInstance = splitParagraphs();
 

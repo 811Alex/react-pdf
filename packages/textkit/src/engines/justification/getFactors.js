@@ -1,4 +1,4 @@
-import isWhiteSpace from '../../glyph/isWhiteSpace';
+import isWhiteSpace from '../../glyph/isWhiteSpace.js';
 
 const WHITESPACE_PRIORITY = 1;
 const LETTER_PRIORITY = 2;
@@ -49,7 +49,7 @@ const getWhitespaceFactor = (direction, options) => {
     : Object.assign({}, SHRINK_WHITESPACE_FACTOR, shrinkWhitespaceFactor);
 };
 
-const factor = (direction, options) => glyphs => {
+const factor = (direction, options) => (glyphs) => {
   const charFactor = getCharFactor(direction, options);
   const whitespaceFactor = getWhitespaceFactor(direction, options);
 

@@ -11,7 +11,7 @@ import {
   Font,
   StyleSheet,
 } from '@react-pdf/renderer';
-import renderToImage from './renderComponent';
+import renderToImage from './renderComponent.js';
 
 const styles = StyleSheet.create({
   title: {

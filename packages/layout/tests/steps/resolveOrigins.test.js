@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolveOrigins from '../../src/steps/resolveOrigins';
+import resolveOrigins from '../../src/steps/resolveOrigins.js';
 
 describe('layout resolveOrigins', () => {
   test('should not resolve for node without box', () => {

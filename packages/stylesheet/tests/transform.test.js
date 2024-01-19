@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import _transformStyles from '../src/transform';
+import _transformStyles from '../src/transform/index.js';
 
 const CONTAINER = { width: 200, height: 400 };
 

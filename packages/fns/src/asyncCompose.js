@@ -1,6 +1,6 @@
 /* eslint-disable no-await-in-loop */
 
-import reverse from './reverse';
+import reverse from './reverse.js';
 
 /**
  * @typedef {Function} AsyncCompose
@@ -15,16 +15,18 @@ import reverse from './reverse';
  * @param {...Function} fns functions
  * @returns {AsyncCompose} composed function
  */
-const asyncCompose = (...fns) => async (value, ...args) => {
-  let result = value;
-  const reversedFns = reverse(fns);
+const asyncCompose =
+  (...fns) =>
+  async (value, ...args) => {
+    let result = value;
+    const reversedFns = reverse(fns);
 
-  for (let i = 0; i < reversedFns.length; i += 1) {
-    const fn = reversedFns[i];
-    result = await fn(result, ...args);
-  }
+    for (let i = 0; i < reversedFns.length; i += 1) {
+      const fn = reversedFns[i];
+      result = await fn(result, ...args);
+    }
 
-  return result;
-};
+    return result;
+  };
 
 export default asyncCompose;

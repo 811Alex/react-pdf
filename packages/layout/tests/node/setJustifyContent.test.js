@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import setJustifyContent from '../../src/node/setJustifyContent';
+import setJustifyContent from '../../src/node/setJustifyContent.js';
 
 describe('node setJustifyContent', () => {
   const mock = vi.fn();

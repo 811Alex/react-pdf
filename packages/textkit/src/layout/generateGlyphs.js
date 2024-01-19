@@ -1,5 +1,5 @@
-import scale from '../run/scale';
-import resolveGlyphIndices from '../indices/resolve';
+import scale from '../run/scale.js';
+import resolveGlyphIndices from '../indices/resolve.js';
 
 const getCharacterSpacing = (run) => run.attributes?.characterSpacing || 0;
 

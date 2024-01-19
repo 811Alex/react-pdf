@@ -1,8 +1,8 @@
 import { beforeEach, describe, expect, test, vi } from 'vitest';
-import fromCodePoint from '../../src/glyph/fromCodePoint';
+import fromCodePoint from '../../src/glyph/fromCodePoint.js';
 
 const font = {
-  glyphForCodePoint: vi.fn(x => ({
+  glyphForCodePoint: vi.fn((x) => ({
     id: x,
     codePoints: [x],
     advancedWidth: 5,

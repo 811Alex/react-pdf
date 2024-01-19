@@ -2,9 +2,9 @@
 import { describe, expect, test } from 'vitest';
 
 import { Document, Page, View } from '@react-pdf/renderer';
-import renderToImage from './renderComponent';
+import renderToImage from './renderComponent.js';
 
-const mount = async children => {
+const mount = async (children) => {
   const image = await renderToImage(
     <Document>
       <Page style={{ backgroundColor: '#e2e2e2' }} size={[100, 25]}>

@@ -2,8 +2,8 @@
 import { describe, expect, test } from 'vitest';
 
 import { Document, Page, Svg, Font, Text, Tspan } from '@react-pdf/renderer';
-import renderToImage from './renderComponent';
-import { Tiger, Chart, Chart2, Gradients, Dasharrays } from './svgs';
+import renderToImage from './renderComponent.js';
+import { Tiger, Chart, Chart2, Gradients, Dasharrays } from './svgs.js';
 
 // pdf.js does not render default fonts in node and I use Open Sans (:
 Font.register({

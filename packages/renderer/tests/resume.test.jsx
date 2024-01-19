@@ -11,7 +11,7 @@ import {
   Document,
   StyleSheet,
 } from '@react-pdf/renderer';
-import renderToImage from './renderComponent';
+import renderToImage from './renderComponent.js';
 
 const headerStyles = StyleSheet.create({
   container: {
@@ -365,7 +365,7 @@ Font.register({
   src: 'https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf',
 });
 
-const Resume = props => (
+const Resume = (props) => (
   <Page {...props} style={resumeStyles.page}>
     <Header />
     <View style={resumeStyles.container}>

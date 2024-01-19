@@ -1,4 +1,4 @@
-import runIndexAt from './runIndexAt';
+import runIndexAt from './runIndexAt.js';
 
 /**
  * Filter runs contained between start and end

@@ -6,8 +6,8 @@ import layoutEngine, {
   textDecoration,
 } from '@react-pdf/textkit';
 
-import fontSubstitution from './fontSubstitution';
-import getAttributedString from './getAttributedString';
+import fontSubstitution from './fontSubstitution.js';
+import getAttributedString from './getAttributedString.js';
 
 const engines = {
   linebreaker,
@@ -20,9 +20,9 @@ const engines = {
 
 const engine = layoutEngine(engines);
 
-const getMaxLines = (node) => node.style?.maxLines;
+const getMaxLines = node => node.style?.maxLines;
 
-const getTextOverflow = (node) => node.style?.textOverflow;
+const getTextOverflow = node => node.style?.textOverflow;
 
 /**
  * Get layout container for specific text node

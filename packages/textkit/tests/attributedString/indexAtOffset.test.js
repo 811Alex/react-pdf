@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import indexAtOffset from '../../src/attributedString/indexAtOffset';
+import indexAtOffset from '../../src/attributedString/indexAtOffset.js';
 
 describe('attributeString indexAtOffset operator', () => {
   test('should return index for single run string', () => {

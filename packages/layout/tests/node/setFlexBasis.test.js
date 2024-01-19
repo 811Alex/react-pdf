@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test, vi } from 'vitest';
-import setFlexBasis from '../../src/node/setFlexBasis';
+import setFlexBasis from '../../src/node/setFlexBasis.js';
 
 describe('node setFlexBasis', () => {
   const mock = vi.fn();

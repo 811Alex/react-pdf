@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test, vi } from 'vitest';
-import setFlexShrink from '../../src/node/setFlexShrink';
+import setFlexShrink from '../../src/node/setFlexShrink.js';
 
 describe('node setFlexShrink', () => {
   const mock = vi.fn();

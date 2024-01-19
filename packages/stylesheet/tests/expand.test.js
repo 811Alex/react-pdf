@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import expandStyles from '../src/expand';
+import expandStyles from '../src/expand/index.js';
 
 describe('stylesheet expand', () => {
   test('should keep unrelated keys equal', () => {
@@ -26,7 +26,7 @@ describe('stylesheet expand', () => {
       ];
       const expanded = {};
 
-      margins.forEach(style => {
+      margins.forEach((style) => {
         expect(expandStyles(style)).toEqual(expanded);
       });
     });
@@ -163,7 +163,7 @@ describe('stylesheet expand', () => {
       ];
       const expanded = {};
 
-      paddings.forEach(style => {
+      paddings.forEach((style) => {
         expect(expandStyles(style)).toEqual(expanded);
       });
     });

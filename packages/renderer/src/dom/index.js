@@ -1,12 +1,12 @@
 import * as primitives from '@react-pdf/primitives';
 
-import usePDF from './usePDF';
-import PDFViewer from './PDFViewer';
-import BlobProvider from './BlobProvider';
-import PDFDownloadLink from './PDFDownloadLink';
-import { pdf, version, Font, StyleSheet } from '../index';
+import usePDF from './usePDF.js';
+import PDFViewer from './PDFViewer.js';
+import BlobProvider from './BlobProvider.js';
+import PDFDownloadLink from './PDFDownloadLink.js';
+import { pdf, version, Font, StyleSheet } from '../index.js';
 
-const throwEnvironmentError = name => {
+const throwEnvironmentError = (name) => {
   throw new Error(
     `${name} is a Node specific API. You're either using this method in a browser, or your bundler is not loading react-pdf from the appropriate web build.`,
   );
@@ -32,15 +32,15 @@ export const render = () => {
   throwEnvironmentError('render');
 };
 
-export * from '../index';
+export * from '../index.js';
 
-export * from './usePDF';
+export * from './usePDF.js';
 
-export * from './PDFViewer';
+export * from './PDFViewer.js';
 
-export * from './BlobProvider';
+export * from './BlobProvider.js';
 
-export * from './PDFDownloadLink';
+export * from './PDFDownloadLink.js';
 
 export * from '@react-pdf/primitives';
 

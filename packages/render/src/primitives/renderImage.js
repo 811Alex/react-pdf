@@ -1,7 +1,7 @@
 import { isNil } from '@react-pdf/fns';
 
-import clipNode from '../operations/clipNode';
-import resolveObjectFit from '../utils/resolveObjectFit';
+import clipNode from '../operations/clipNode.js';
+import resolveObjectFit from '../utils/resolveObjectFit.js';
 
 const drawImage = (ctx, node, options = {}) => {
   const { left, top } = node.box;

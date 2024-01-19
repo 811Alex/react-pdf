@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest';
 
-import { loadYoga } from '../../src/yoga';
+import { loadYoga } from '../../src/yoga/index.js';
 
-import resolvePagination from '../../src/steps/resolvePagination';
-import resolveDimensions from '../../src/steps/resolveDimensions';
+import resolvePagination from '../../src/steps/resolvePagination.js';
+import resolveDimensions from '../../src/steps/resolveDimensions.js';
 
 // dimensions is required by pagination step and them are calculated here
 const calcLayout = node => resolvePagination(resolveDimensions(node));

@@ -4,9 +4,9 @@
 
 // import { PDFFont } from '@react-pdf/pdfkit';
 
-import SVGPage from '../page';
-import serialize from './serialize';
-import { LinearGradient, RadialGradient } from '../gradient';
+import SVGPage from '../page/index.js';
+import serialize from './serialize.js';
+import { LinearGradient, RadialGradient } from '../gradient/index.js';
 
 class SVGDocument {
   /**

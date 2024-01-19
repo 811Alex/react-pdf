@@ -1,5 +1,5 @@
-import Gradient from '../gradient';
-import pattern from '../pattern';
+import Gradient from '../gradient.js';
+import pattern from '../pattern.js';
 
 const { PDFGradient, PDFLinearGradient, PDFRadialGradient } = Gradient;
 const { PDFTilingPattern } = pattern;
@@ -117,7 +117,8 @@ export default {
   },
 
   _doOpacity(fillOpacity, strokeOpacity) {
-    let dictionary, name;
+    let dictionary;
+    let name;
     if (fillOpacity == null && strokeOpacity == null) {
       return;
     }

@@ -1,4 +1,4 @@
-import fromFragments from '../attributedString/fromFragments';
+import fromFragments from '../attributedString/fromFragments.js';
 
 /**
  * Default word hyphenation engine used when no one provided.

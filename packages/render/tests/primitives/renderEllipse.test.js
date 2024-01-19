@@ -2,10 +2,10 @@ import { describe, expect, test } from 'vitest';
 
 import * as P from '@react-pdf/primitives';
 
-import createCTX from '../ctx';
-import renderEllipse from '../../src/primitives/renderEllipse';
+import createCTX from '../ctx.js';
+import renderEllipse from '../../src/primitives/renderEllipse.js';
 
-const round = num => Math.round(num * 100) / 100;
+const round = (num) => Math.round(num * 100) / 100;
 
 describe('primitive renderEllipse', () => {
   test('should render ellipse correctly', () => {
@@ -15,7 +15,7 @@ describe('primitive renderEllipse', () => {
 
     renderEllipse(ctx, node);
 
-    const bezierCalls = ctx.bezierCurveTo.mock.calls.map(c => c.map(round));
+    const bezierCalls = ctx.bezierCurveTo.mock.calls.map((c) => c.map(round));
 
     expect(bezierCalls).toHaveLength(4);
     expect(ctx.moveTo.mock.calls).toEqual([[30, 80]]);

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import copy from '../../src/rect/copy';
+import copy from '../../src/rect/copy.js';
 
 describe('rect copy operator', () => {
   test('should create copy of rect', () => {

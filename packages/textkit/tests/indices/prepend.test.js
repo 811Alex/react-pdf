@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import prepend from '../../src/indices/prepend';
+import prepend from '../../src/indices/prepend.js';
 
 describe('indices prepend operator', () => {
   test('should prepend indices to empty string', () => {

@@ -1,4 +1,4 @@
-import setYogaValue from './setYogaValue';
+import setYogaValue from './setYogaValue.js';
 
 /**
  * Set flex basis attribute to node's Yoga instance

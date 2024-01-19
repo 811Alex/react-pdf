@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/run/empty';
+import empty from '../../src/run/empty.js';
 
 describe('run empty operator', () => {
   test('should return empty run', () => {

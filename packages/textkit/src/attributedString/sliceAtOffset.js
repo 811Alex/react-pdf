@@ -1,5 +1,5 @@
-import slice from './slice';
-import indexAtOffset from './indexAtOffset';
+import slice from './slice.js';
+import indexAtOffset from './indexAtOffset.js';
 
 /**
  * Slice attributed string at given offset

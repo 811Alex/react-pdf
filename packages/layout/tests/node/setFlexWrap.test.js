@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import setFlexWrap from '../../src/node/setFlexWrap';
+import setFlexWrap from '../../src/node/setFlexWrap.js';
 
 describe('node setFlexWrap', () => {
   const mock = vi.fn();

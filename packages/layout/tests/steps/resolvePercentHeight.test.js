@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolvePercentHeight from '../../src/steps/resolvePercentHeight';
+import resolvePercentHeight from '../../src/steps/resolvePercentHeight.js';
 
 describe('layout resolvePercentHeight', () => {
   test('Should keep empty document untouched', () => {

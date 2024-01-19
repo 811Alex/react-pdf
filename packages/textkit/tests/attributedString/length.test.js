@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/attributedString/empty';
-import length from '../../src/attributedString/length';
+import empty from '../../src/attributedString/empty.js';
+import length from '../../src/attributedString/length.js';
 
 describe('attributeString length operator', () => {
   test('should return 0 for empty string', () => {

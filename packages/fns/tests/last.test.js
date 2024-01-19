@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import last from '../src/last';
+import last from '../src/last.js';
 
 describe('last', () => {
   test('returns the last element of an ordered collection', () => {

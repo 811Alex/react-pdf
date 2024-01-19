@@ -1,8 +1,8 @@
-import scale from './scale';
-import getFont from './getFont';
-import isNumber from '../utils/isNumber';
-import appendIndices from '../indices/append';
-import glyphFromCodePoint from '../glyph/fromCodePoint';
+import scale from './scale.js';
+import getFont from './getFont.js';
+import isNumber from '../utils/isNumber.js';
+import appendIndices from '../indices/append.js';
+import glyphFromCodePoint from '../glyph/fromCodePoint.js';
 
 /**
  * Append glyph to run

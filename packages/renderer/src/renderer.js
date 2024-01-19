@@ -5,7 +5,7 @@
 import ReactFiberReconciler from 'react-reconciler';
 import * as scheduler from 'scheduler';
 
-import propsEqual from './utils/propsEqual';
+import propsEqual from './utils/propsEqual.js';
 
 const emptyObject = {};
 

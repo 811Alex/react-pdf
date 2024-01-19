@@ -1,20 +1,20 @@
-import processFlex from './flex';
+import processFlex from './flex.js';
 import {
   processMargin,
   processMarginVertical,
   processMarginHorizontal,
   processMarginSingle,
-} from './margins';
-import processBorders from './borders';
+} from './margins.js';
+import processBorders from './borders.js';
 import {
   processPadding,
   processPaddingVertical,
   processPaddingHorizontal,
   processPaddingSingle,
-} from './paddings';
-import processObjectPosition from './objectPosition';
-import processTransformOrigin from './transformOrigin';
-import processGap from './gap';
+} from './paddings.js';
+import processObjectPosition from './objectPosition.js';
+import processTransformOrigin from './transformOrigin.js';
+import processGap from './gap.js';
 
 const shorthands = {
   flex: processFlex,

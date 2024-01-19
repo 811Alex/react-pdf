@@ -1,6 +1,6 @@
-import renderNode from './primitives/renderNode';
-import addMetadata from './operations/addMetadata';
-import addBookmarks from './operations/addBookmarks';
+import renderNode from './primitives/renderNode.js';
+import addMetadata from './operations/addMetadata.js';
+import addBookmarks from './operations/addBookmarks.js';
 
 const render = (ctx, doc) => {
   const pages = doc.children || [];
@@ -8,7 +8,7 @@ const render = (ctx, doc) => {
 
   addMetadata(ctx, doc);
 
-  pages.forEach(page => renderNode(ctx, page, options));
+  pages.forEach((page) => renderNode(ctx, page, options));
 
   addBookmarks(ctx, doc);
 

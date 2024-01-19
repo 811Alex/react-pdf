@@ -1,4 +1,4 @@
-import maxY from './maxY';
+import maxY from './maxY.js';
 
 const ZERO = { x: 0, y: 0 };
 
@@ -8,7 +8,7 @@ const ZERO = { x: 0, y: 0 };
  * @param {Object} rect rect
  * @returns {{ x: number, y: number }} bottom left point
  */
-const bottomLeft = rect => {
+const bottomLeft = (rect) => {
   return rect ? { x: rect.x || 0, y: maxY(rect) } : ZERO;
 };
 

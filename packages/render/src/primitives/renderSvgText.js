@@ -1,4 +1,4 @@
-import renderGlyphs from './renderGlyphs';
+import renderGlyphs from './renderGlyphs.js';
 
 const renderRun = (ctx, run) => {
   const runAdvanceWidth = run.xAdvance;
@@ -91,13 +91,13 @@ const renderSpan = (ctx, line, textAnchor, dominantBaseline) => {
 
   ctx.translate(xTranslate, yTranslate);
 
-  line.runs.forEach(run => renderRun(ctx, run));
+  line.runs.forEach((run) => renderRun(ctx, run));
 
   ctx.restore();
 };
 
 const renderSvgText = (ctx, node) => {
-  node.children.forEach(span =>
+  node.children.forEach((span) =>
     renderSpan(
       ctx,
       span.lines[0],

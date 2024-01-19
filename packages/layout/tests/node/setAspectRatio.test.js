@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test, vi } from 'vitest';
-import setAspectRatio from '../../src/node/setAspectRatio';
+import setAspectRatio from '../../src/node/setAspectRatio.js';
 
 describe('node setAspectRatio', () => {
   const mock = vi.fn();

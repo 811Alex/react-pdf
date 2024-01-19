@@ -1,4 +1,4 @@
-import runIndexAtInternal from '../run/runIndexAt';
+import runIndexAtInternal from '../run/runIndexAt.js';
 
 /**
  * Get run index at char index

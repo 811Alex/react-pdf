@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import reverse from '../src/reverse';
+import reverse from '../src/reverse.js';
 
 describe('reverse', () => {
   test('reverses arrays', () => {

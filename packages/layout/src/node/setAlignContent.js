@@ -1,4 +1,4 @@
-import setAlign from './setAlign';
+import setAlign from './setAlign.js';
 
 /**
  * Set align content attribute to node's Yoga instance

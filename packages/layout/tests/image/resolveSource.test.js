@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import resolveSource from '../../src/image/resolveSource';
+import resolveSource from '../../src/image/resolveSource.js';
 
 const SOURCE_URL = 'gotcha';
 const SOURCE_URL_OBJECT = { uri: 'gotcha', method: 'GET' };

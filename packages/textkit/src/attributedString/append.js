@@ -1,8 +1,8 @@
 import { last } from '@react-pdf/fns';
 
-import emptyRun from '../run/empty';
-import appendToRun from '../run/append';
-import stringFromCodePoints from '../utils/stringFromCodePoints';
+import emptyRun from '../run/empty.js';
+import appendToRun from '../run/append.js';
+import stringFromCodePoints from '../utils/stringFromCodePoints.js';
 
 /**
  * Append glyph into last run of attributed string

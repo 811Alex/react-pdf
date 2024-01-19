@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import add from '../../src/run/add';
+import add from '../../src/run/add.js';
 
 describe('run add operator', () => {
   test('should return equal run if 0', () => {

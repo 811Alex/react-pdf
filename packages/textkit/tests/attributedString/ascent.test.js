@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/attributedString/empty';
-import ascent from '../../src/attributedString/ascent';
+import empty from '../../src/attributedString/empty.js';
+import ascent from '../../src/attributedString/ascent.js';
 
 const font = { ascent: 10, unitsPerEm: 2 };
 

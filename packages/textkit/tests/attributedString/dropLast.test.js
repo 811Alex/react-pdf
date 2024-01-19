@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import pluck from '../internal/pluck';
-import dropLast from '../../src/attributedString/dropLast';
+import pluck from '../internal/pluck.js';
+import dropLast from '../../src/attributedString/dropLast.js';
 
 describe('attributeString dropLast operator', () => {
   test('should dropLast with one run', () => {

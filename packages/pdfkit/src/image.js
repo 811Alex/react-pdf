@@ -4,8 +4,8 @@ By Devon Govett
 */
 
 import fs from 'fs';
-import JPEG from './image/jpeg';
-import PNG from './image/png';
+import JPEG from './image/jpeg.js';
+import PNG from './image/png.js';
 
 class PDFImage {
   static open(src, label) {

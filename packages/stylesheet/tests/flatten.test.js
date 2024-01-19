@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import flatten from '../src/flatten';
+import flatten from '../src/flatten/index.js';
 
 describe('stylesheet flatten', () => {
   test('should return empty object for undefined', () => {

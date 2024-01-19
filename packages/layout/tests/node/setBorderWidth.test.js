@@ -7,7 +7,7 @@ import setBorder, {
   setBorderRight,
   setBorderBottom,
   setBorderLeft,
-} from '../../src/node/setBorderWidth';
+} from '../../src/node/setBorderWidth.js';
 
 describe('node setBorderWidth', () => {
   const mock = vi.fn();

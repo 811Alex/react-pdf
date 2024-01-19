@@ -1,5 +1,5 @@
-import length from '../attributedString/length';
-import slice from '../attributedString/slice';
+import length from '../attributedString/length.js';
+import slice from '../attributedString/slice.js';
 
 /**
  * @typedef {Function} SplitParagraphs

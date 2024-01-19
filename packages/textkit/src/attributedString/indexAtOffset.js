@@ -1,6 +1,6 @@
-import runLength from '../run/length';
-import runAdvanceWidth from '../run/advanceWidth';
-import runIndexAtOffset from '../run/indexAtOffset';
+import runLength from '../run/length.js';
+import runAdvanceWidth from '../run/advanceWidth.js';
+import runIndexAtOffset from '../run/indexAtOffset.js';
 
 /**
  * Get string index at offset

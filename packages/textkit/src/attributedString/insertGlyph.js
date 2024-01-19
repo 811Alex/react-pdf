@@ -1,8 +1,8 @@
-import append from './append';
-import add from '../run/add';
-import insert from '../run/insert';
-import runIndexAt from './runIndexAt';
-import stringFromCodePoints from '../utils/stringFromCodePoints';
+import append from './append.js';
+import add from '../run/add.js';
+import insert from '../run/insert.js';
+import runIndexAt from './runIndexAt.js';
+import stringFromCodePoints from '../utils/stringFromCodePoints.js';
 
 /**
  * Insert glyph into attributed string

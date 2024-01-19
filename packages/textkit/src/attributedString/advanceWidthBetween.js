@@ -1,5 +1,5 @@
-import filterRuns from '../run/filter';
-import runAdvanceWidthBetween from '../run/advanceWidthBetween';
+import filterRuns from '../run/filter.js';
+import runAdvanceWidthBetween from '../run/advanceWidthBetween.js';
 
 /**
  * Advance width between start and end

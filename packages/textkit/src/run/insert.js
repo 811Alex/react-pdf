@@ -1,9 +1,9 @@
-import slice from './slice';
-import concat from './concat';
-import append from './append';
-import getFont from './getFont';
-import isNumber from '../utils/isNumber';
-import glyphFromCodePoint from '../glyph/fromCodePoint';
+import slice from './slice.js';
+import concat from './concat.js';
+import append from './append.js';
+import getFont from './getFont.js';
+import isNumber from '../utils/isNumber.js';
+import glyphFromCodePoint from '../glyph/fromCodePoint.js';
 
 /**
  * Insert glyph to run in the given index

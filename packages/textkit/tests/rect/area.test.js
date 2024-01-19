@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/rect/empty';
-import area from '../../src/rect/area';
+import empty from '../../src/rect/empty.js';
+import area from '../../src/rect/area.js';
 
 describe('rect area operator', () => {
   test('should return zero if no rect provided', () => {

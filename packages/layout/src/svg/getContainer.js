@@ -1,4 +1,4 @@
-import parseViewBox from './parseViewbox';
+import parseViewBox from './parseViewbox.js';
 
 const getContainer = node => {
   const viewbox = parseViewBox(node.props.viewBox);

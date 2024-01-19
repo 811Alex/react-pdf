@@ -5,17 +5,17 @@
 import * as P from '@react-pdf/primitives';
 import { isNil, omit, compose } from '@react-pdf/fns';
 
-import isFixed from '../node/isFixed';
-import splitText from '../text/splitText';
-import splitNode from '../node/splitNode';
-import canNodeWrap from '../node/getWrap';
-import getWrapArea from '../page/getWrapArea';
-import getContentArea from '../page/getContentArea';
-import createInstances from '../node/createInstances';
-import shouldNodeBreak from '../node/shouldBreak';
-import resolveTextLayout from './resolveTextLayout';
-import resolveInheritance from './resolveInheritance';
-import { resolvePageDimensions } from './resolveDimensions';
+import isFixed from '../node/isFixed.js';
+import splitText from '../text/splitText.js';
+import splitNode from '../node/splitNode.js';
+import canNodeWrap from '../node/getWrap.js';
+import getWrapArea from '../page/getWrapArea.js';
+import getContentArea from '../page/getContentArea.js';
+import createInstances from '../node/createInstances.js';
+import shouldNodeBreak from '../node/shouldBreak.js';
+import resolveTextLayout from './resolveTextLayout.js';
+import resolveInheritance from './resolveInheritance.js';
+import { resolvePageDimensions } from './resolveDimensions.js';
 
 const isText = (node) => node.type === P.Text;
 

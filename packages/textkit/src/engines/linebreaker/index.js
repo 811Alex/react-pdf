@@ -1,8 +1,8 @@
-import bestFit from './bestFit';
-import linebreak from './linebreak';
-import slice from '../../attributedString/slice';
-import insertGlyph from '../../attributedString/insertGlyph';
-import advanceWidthBetween from '../../attributedString/advanceWidthBetween';
+import bestFit from './bestFit.js';
+import linebreak from './linebreak.js';
+import slice from '../../attributedString/slice.js';
+import insertGlyph from '../../attributedString/insertGlyph.js';
+import advanceWidthBetween from '../../attributedString/advanceWidthBetween.js';
 
 const HYPHEN = 0x002d;
 const TOLERANCE_STEPS = 5;

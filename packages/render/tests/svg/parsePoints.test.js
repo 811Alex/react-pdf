@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import parsePoints from '../../src/svg/parsePoints';
+import parsePoints from '../../src/svg/parsePoints.js';
 
 describe('svg parsePoints', () => {
   test('should return empty array for null argument', () => {

@@ -1,13 +1,13 @@
 import { last, compose } from '@react-pdf/fns';
 
-import runHeight from '../run/height';
-import runAscent from '../run/ascent';
-import runDescent from '../run/descent';
-import runAdvanceWidth from '../run/advanceWidth';
-import advanceWidth from '../attributedString/advanceWidth';
-import leadingOffset from '../attributedString/leadingOffset';
-import trailingOffset from '../attributedString/trailingOffset';
-import dropLast from '../attributedString/dropLast';
+import runHeight from '../run/height.js';
+import runAscent from '../run/ascent.js';
+import runDescent from '../run/descent.js';
+import runAdvanceWidth from '../run/advanceWidth.js';
+import advanceWidth from '../attributedString/advanceWidth.js';
+import leadingOffset from '../attributedString/leadingOffset.js';
+import trailingOffset from '../attributedString/trailingOffset.js';
+import dropLast from '../attributedString/dropLast.js';
 
 const ALIGNMENT_FACTORS = { center: 0.5, right: 1 };
 

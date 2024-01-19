@@ -1,6 +1,6 @@
-import omit from '../run/omit';
-import stringHeight from '../attributedString/height';
-import generateLineRects from './generateLineRects';
+import omit from '../run/omit.js';
+import stringHeight from '../attributedString/height.js';
+import generateLineRects from './generateLineRects.js';
 
 const ATTACHMENT_CODE = '\ufffc'; // 65532
 

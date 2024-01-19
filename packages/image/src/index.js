@@ -1,3 +1,3 @@
-import resolveImage from './resolve';
+import resolveImage from './resolve.js';
 
 export default resolveImage;

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
 import * as P from '@react-pdf/primitives';
-import shouldBreak from '../../src/node/shouldBreak';
+import shouldBreak from '../../src/node/shouldBreak.js';
 
 describe('node shouldBreak', () => {
   test('should not break when the child has enough space on the page', () => {

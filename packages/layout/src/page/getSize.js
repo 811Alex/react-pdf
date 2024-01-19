@@ -1,4 +1,4 @@
-import isLandscape from './isLandscape';
+import isLandscape from './isLandscape.js';
 
 const PAGE_SIZES = {
   '4A0': [4767.87, 6740.79],

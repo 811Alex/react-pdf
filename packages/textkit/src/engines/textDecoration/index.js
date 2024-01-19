@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
 
-import runAscent from '../../run/ascent';
-import ascent from '../../attributedString/ascent';
-import runAdvanceWidth from '../../run/advanceWidth';
-import advanceWidth from '../../attributedString/advanceWidth';
+import runAscent from '../../run/ascent.js';
+import ascent from '../../attributedString/ascent.js';
+import runAdvanceWidth from '../../run/advanceWidth.js';
+import advanceWidth from '../../attributedString/advanceWidth.js';
 
 // The base font size used for calculating underline thickness.
 const BASE_FONT_SIZE = 12;
@@ -13,7 +13,7 @@ const BASE_FONT_SIZE = 12;
  * DecorationLines for a line fragment, including underlines
  * and strikes.
  */
-const textDecoration = () => lineFragment => {
+const textDecoration = () => (lineFragment) => {
   let x = lineFragment.overflowLeft || 0;
   const overflowRight = lineFragment.overflowRight || 0;
   const maxX = advanceWidth(lineFragment) - overflowRight;

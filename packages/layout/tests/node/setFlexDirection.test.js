@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import setFlexDirection from '../../src/node/setFlexDirection';
+import setFlexDirection from '../../src/node/setFlexDirection.js';
 
 describe('node setFlexDirection', () => {
   const mock = vi.fn();

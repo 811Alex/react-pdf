@@ -1,4 +1,4 @@
-import PDFMetadata from '../metadata';
+import PDFMetadata from '../metadata.js';
 
 export default {
   initMetadata() {

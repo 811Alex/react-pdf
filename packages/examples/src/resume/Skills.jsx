@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 
-import Title from './Title';
-import List, { Item } from './List';
+import Title from './Title.js';
+import List, { Item } from './List.js';
 
 const styles = StyleSheet.create({
   title: {
@@ -21,7 +21,7 @@ const SkillEntry = ({ name, skills }) => (
   <View>
     <Text style={styles.title}>{name}</Text>
     <List>
-      {skills.map(skill => (
+      {skills.map((skill) => (
         <Item key={skill}>{skill}</Item>
       ))}
     </List>

@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 
-import getMargin from '../node/getMargin';
-import getPadding from '../node/getPadding';
-import isHeightAuto from '../page/isHeightAuto';
+import getMargin from '../node/getMargin.js';
+import getPadding from '../node/getPadding.js';
+import isHeightAuto from '../page/isHeightAuto.js';
 
 const SAFETY_HEIGHT = 10;
 

@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest';
 
-import resolveInheritance from '../../src/steps/resolveInheritance';
+import resolveInheritance from '../../src/steps/resolveInheritance.js';
 
 describe('layout resolveInheritance', () => {
-  const shouldInherit = prop => () => {
+  const shouldInherit = (prop) => () => {
     const root = {
       type: 'DOCUMENT',
       children: [

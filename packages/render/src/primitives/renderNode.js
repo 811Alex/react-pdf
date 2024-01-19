@@ -1,19 +1,19 @@
 import * as P from '@react-pdf/primitives';
-import renderSvg from './renderSvg';
-import renderText from './renderText';
-import renderPage from './renderPage';
-import renderNote from './renderNote';
-import renderImage from './renderImage';
-import renderDebug from './renderDebug';
-import renderCanvas from './renderCanvas';
-import renderBorders from './renderBorders';
-import renderBackground from './renderBackground';
-import setLink from '../operations/setLink';
-import clipNode from '../operations/clipNode';
-import transform from '../operations/transform';
-import setDestination from '../operations/setDestination';
+import renderSvg from './renderSvg.js';
+import renderText from './renderText.js';
+import renderPage from './renderPage.js';
+import renderNote from './renderNote.js';
+import renderImage from './renderImage.js';
+import renderDebug from './renderDebug.js';
+import renderCanvas from './renderCanvas.js';
+import renderBorders from './renderBorders.js';
+import renderBackground from './renderBackground.js';
+import setLink from '../operations/setLink.js';
+import clipNode from '../operations/clipNode.js';
+import transform from '../operations/transform.js';
+import setDestination from '../operations/setDestination.js';
 
-const isRecursiveNode = node => node.type !== P.Text && node.type !== P.Svg;
+const isRecursiveNode = (node) => node.type !== P.Text && node.type !== P.Svg;
 
 const renderChildren = (ctx, node, options) => {
   ctx.save();
@@ -23,7 +23,7 @@ const renderChildren = (ctx, node, options) => {
   }
 
   const children = node.children || [];
-  const renderChild = child => renderNode(ctx, child, options);
+  const renderChild = (child) => renderNode(ctx, child, options);
 
   children.forEach(renderChild);
 

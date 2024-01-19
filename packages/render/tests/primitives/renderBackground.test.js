@@ -2,8 +2,8 @@ import { describe, expect, test } from 'vitest';
 
 import * as P from '@react-pdf/primitives';
 
-import createCTX from '../ctx';
-import renderBackground from '../../src/primitives/renderBackground';
+import createCTX from '../ctx.js';
+import renderBackground from '../../src/primitives/renderBackground.js';
 
 describe('primitive renderBackground', () => {
   test('should not render if node has no background', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import glyphIndexAt from '../../src/run/glyphIndexAt';
+import glyphIndexAt from '../../src/run/glyphIndexAt.js';
 
 describe('run glyphIndexAt operator', () => {
   test('should return string index if no glyph indices present', () => {

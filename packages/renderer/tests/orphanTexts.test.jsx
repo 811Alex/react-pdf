@@ -1,11 +1,11 @@
 import { describe, expect, test } from 'vitest';
 
 import { Text, Document, Page } from '@react-pdf/primitives';
-import renderToImage from './renderComponent';
+import renderToImage from './renderComponent.js';
 
 const emptyString = '';
 
-const mount = async children => {
+const mount = async (children) => {
   const image = await renderToImage(
     <Document>
       <Page size={[100, 100]}>{children}</Page>

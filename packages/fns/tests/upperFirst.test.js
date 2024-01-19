@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import upperFirst from '../src/upperFirst';
+import upperFirst from '../src/upperFirst.js';
 
 describe('upperFirst', () => {
   test('should return undefined for undefined', () => {

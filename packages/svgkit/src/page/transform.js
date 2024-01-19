@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 
-import { createElement } from './element';
+import { createElement } from './element.js';
 
 export default {
   addTransform(t) {

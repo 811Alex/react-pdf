@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolvePageSizes from '../../src/steps/resolvePageSizes';
+import resolvePageSizes from '../../src/steps/resolvePageSizes.js';
 
 describe('layout resolvePageSizes', () => {
   test('Should default to A4', () => {

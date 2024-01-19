@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import fromFragments from '../../src/attributedString/fromFragments';
+import fromFragments from '../../src/attributedString/fromFragments.js';
 
 describe('attributeString fromFragments operator', () => {
   test('should return empty attributed string for no fragments', () => {

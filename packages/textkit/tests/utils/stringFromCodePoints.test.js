@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import stringFromCodePoints from '../../src/utils/stringFromCodePoints';
+import stringFromCodePoints from '../../src/utils/stringFromCodePoints.js';
 
 describe('utils stringFromCodePoints operator', () => {
   test('should return empty string if no param passed', () => {

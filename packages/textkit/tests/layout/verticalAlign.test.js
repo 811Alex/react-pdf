@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import verticalAlignment from '../../src/layout/verticalAlign';
+import verticalAlignment from '../../src/layout/verticalAlign.js';
 
 describe('verticalAlign', () => {
   test('should apply vertical alignment "super" to string', () => {

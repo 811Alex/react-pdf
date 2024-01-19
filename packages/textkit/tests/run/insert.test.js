@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'vitest';
 
-import font from '../internal/font';
-import pluck from '../internal/pluck';
-import insert from '../../src/run/insert';
+import font from '../internal/font.js';
+import pluck from '../internal/pluck.js';
+import insert from '../../src/run/insert.js';
 
 describe('run insert glyph operator', () => {
   test('should return same run if no glyph provided', () => {

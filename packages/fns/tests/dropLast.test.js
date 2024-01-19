@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import dropLast from '../src/dropLast';
+import dropLast from '../src/dropLast.js';
 
 describe('dropLast', () => {
   test('skips the last element from a list, returning the remainder', () => {

@@ -3,7 +3,7 @@
 
 import { useEffect } from 'react';
 
-import usePDF from './usePDF';
+import usePDF from './usePDF.js';
 
 export const PDFViewer = ({
   title,

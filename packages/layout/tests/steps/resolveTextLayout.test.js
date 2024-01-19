@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest';
 
-import { loadYoga } from '../../src/yoga';
+import { loadYoga } from '../../src/yoga/index.js';
 
-import resolveTextLayout from '../../src/steps/resolveTextLayout';
-import resolveDimensions from '../../src/steps/resolveDimensions';
+import resolveTextLayout from '../../src/steps/resolveTextLayout.js';
+import resolveDimensions from '../../src/steps/resolveDimensions.js';
 
 const getRoot = async (text = 'hello world', styles = {}) => ({
   type: 'DOCUMENT',

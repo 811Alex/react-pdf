@@ -1,4 +1,4 @@
-import PDFImage from '../image';
+import PDFImage from '../image.js';
 
 export default {
   initImages() {

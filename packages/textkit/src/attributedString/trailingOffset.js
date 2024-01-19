@@ -1,6 +1,6 @@
 import { last } from '@react-pdf/fns';
 
-import runTrailingOffset from '../run/trailingOffset';
+import runTrailingOffset from '../run/trailingOffset.js';
 
 /**
  * Get attributed string trailing white space offset
@@ -8,7 +8,7 @@ import runTrailingOffset from '../run/trailingOffset';
  * @param {Object} attributedString attributed string
  * @returns {number} trailing white space offset
  */
-const trailingOffset = attributedString => {
+const trailingOffset = (attributedString) => {
   const runs = attributedString.runs || [];
 
   return runTrailingOffset(last(runs));

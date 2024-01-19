@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'vitest';
 
-import evolve from '../src/evolve';
+import evolve from '../src/evolve.js';
 
-const add = a => b => a + b;
+const add = (a) => (b) => a + b;
 
 describe('evolve', () => {
   test('creates a new object by evolving the `object` according to the `transformation` functions', () => {

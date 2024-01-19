@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import partition from '../../src/rect/partition';
+import partition from '../../src/rect/partition.js';
 
 describe('rect partition operator', () => {
   test('should return empty rect if height 0', () => {

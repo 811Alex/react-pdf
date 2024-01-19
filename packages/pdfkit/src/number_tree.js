@@ -2,7 +2,7 @@
 PDFNumberTree - represents a number tree object
 */
 
-import PDFTree from './tree';
+import PDFTree from './tree.js';
 
 class PDFNumberTree extends PDFTree {
   _compareKeys(a, b) {

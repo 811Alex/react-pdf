@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest';
 
-import font from '../internal/font';
-import pluck from '../internal/pluck';
-import empty from '../../src/attributedString/empty';
-import append from '../../src/attributedString/append';
+import font from '../internal/font.js';
+import pluck from '../internal/pluck.js';
+import empty from '../../src/attributedString/empty.js';
+import append from '../../src/attributedString/append.js';
 
 describe('attributeString append operator', () => {
   test('should return copy of string if no glyph provided', () => {
@@ -84,20 +84,10 @@ describe('attributeString append operator', () => {
     expect(result.runs[0]).toHaveProperty('end', 6);
     expect(result.runs[0].glyphIndices).toEqual([0, 1, 2, 3, 4, 5]);
     expect(pluck('id', result.runs[0].glyphs)).toEqual([
-      76,
-      111,
-      114,
-      101,
-      109,
-      76,
+      76, 111, 114, 101, 109, 76,
     ]);
     expect(pluck('xAdvance', result.runs[0].positions)).toEqual([
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
+      5, 6, 7, 8, 9, 10,
     ]);
   });
 
@@ -184,20 +174,10 @@ describe('attributeString append operator', () => {
     expect(result.runs[0]).toHaveProperty('end', 7);
     expect(result.runs[0].glyphIndices).toEqual([0, 1, 2, 3, 4, 5, 5]);
     expect(pluck('id', result.runs[0].glyphs)).toEqual([
-      76,
-      111,
-      114,
-      101,
-      109,
-      64257,
+      76, 111, 114, 101, 109, 64257,
     ]);
     expect(pluck('xAdvance', result.runs[0].positions)).toEqual([
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
+      5, 6, 7, 8, 9, 10,
     ]);
   });
 

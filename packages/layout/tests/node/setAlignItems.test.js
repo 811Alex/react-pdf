@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import setAlignItems from '../../src/node/setAlignItems';
+import setAlignItems from '../../src/node/setAlignItems.js';
 
 describe('node setAlignItems', () => {
   const mock = vi.fn();

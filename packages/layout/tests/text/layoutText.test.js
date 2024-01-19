@@ -2,7 +2,7 @@ import { describe, expect, test, vi } from 'vitest';
 
 import * as P from '@react-pdf/primitives';
 
-import layoutText from '../../src/text/layoutText';
+import layoutText from '../../src/text/layoutText.js';
 
 const TEXT =
   'Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you';

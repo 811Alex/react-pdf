@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/run/empty';
-import leadingOffset from '../../src/run/leadingOffset';
+import empty from '../../src/run/empty.js';
+import leadingOffset from '../../src/run/leadingOffset.js';
 
 describe('run leadingOffset operator', () => {
   test('should return zero for empty run', () => {

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import pluck from '../internal/pluck';
-import sliceAtOffset from '../../src/attributedString/sliceAtOffset';
+import pluck from '../internal/pluck.js';
+import sliceAtOffset from '../../src/attributedString/sliceAtOffset.js';
 
 describe('attributeString sliceAtOffset operator', () => {
   test('should slice single run string', () => {

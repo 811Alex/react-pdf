@@ -1,5 +1,5 @@
-import SVGPath from '../path';
-import PDFObject from '../object';
+import SVGPath from '../path.js';
+import PDFObject from '../object.js';
 
 const { number } = PDFObject;
 

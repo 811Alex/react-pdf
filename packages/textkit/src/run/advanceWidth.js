@@ -1,4 +1,4 @@
-import positionsAdvanceWidth from '../positions/advanceWidth';
+import positionsAdvanceWidth from '../positions/advanceWidth.js';
 
 /**
  * Return run advance width
@@ -6,7 +6,7 @@ import positionsAdvanceWidth from '../positions/advanceWidth';
  * @param {Object}  run
  * @returns {number} advance width
  */
-const advanceWidth = run => {
+const advanceWidth = (run) => {
   return positionsAdvanceWidth(run.positions || []);
 };
 

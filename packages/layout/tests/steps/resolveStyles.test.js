@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolveStyles from '../../src/steps/resolveStyles';
+import resolveStyles from '../../src/steps/resolveStyles.js';
 
 describe('layout resolveStyles', () => {
   test('Should resolve page styles', () => {

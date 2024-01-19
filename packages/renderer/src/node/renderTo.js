@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { Buffer } from 'buffer';
 
-import { pdf } from '../index';
+import { pdf } from '../index.js';
 
 /**
  * @param {React.ReactElement} element

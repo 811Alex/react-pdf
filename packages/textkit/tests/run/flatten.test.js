@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import flatten from '../../src/run/flatten';
+import flatten from '../../src/run/flatten.js';
 
 describe('run flatten operator', () => {
   test('should return empty array if no runs passed', () => {

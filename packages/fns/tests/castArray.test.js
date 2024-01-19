@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import castArray from '../src/castArray';
+import castArray from '../src/castArray.js';
 
 describe('castArray', () => {
   test('should return [undefined] for undefined', () => {

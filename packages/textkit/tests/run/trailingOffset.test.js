@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/run/empty';
-import trailingOffset from '../../src/run/trailingOffset';
+import empty from '../../src/run/empty.js';
+import trailingOffset from '../../src/run/trailingOffset.js';
 
 describe('run trailingOffset operator', () => {
   test('should return zero for empty run', () => {

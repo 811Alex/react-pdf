@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/rect/empty';
-import maxY from '../../src/rect/maxY';
+import empty from '../../src/rect/empty.js';
+import maxY from '../../src/rect/maxY.js';
 
 describe('rect maxY operator', () => {
   test('should return zero if no rect provided', () => {

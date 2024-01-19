@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import get from '../src/get';
+import get from '../src/get.js';
 
 describe('get', () => {
   const deepObject = {

@@ -2,8 +2,8 @@
 
 import resolveImage from '@react-pdf/image';
 
-import getSource from './getSource';
-import resolveSource from './resolveSource';
+import getSource from './getSource.js';
+import resolveSource from './resolveSource.js';
 
 /**
  * Fetches image and append data to node
@@ -11,7 +11,7 @@ import resolveSource from './resolveSource';
  *
  * @param {Object} node
  */
-const fetchImage = async node => {
+const fetchImage = async (node) => {
   const src = getSource(node);
   const { cache } = node.props;
 

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isPortrait from '../../src/page/isPortrait';
+import isPortrait from '../../src/page/isPortrait.js';
 
 describe('page isPortrait', () => {
   test('Should return true if no orientation provided', () => {

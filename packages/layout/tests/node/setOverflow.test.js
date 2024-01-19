@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import setOverflow from '../../src/node/setOverflow';
+import setOverflow from '../../src/node/setOverflow.js';
 
 describe('node setOverflow', () => {
   const mock = vi.fn();

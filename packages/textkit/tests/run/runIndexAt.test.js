@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import runIndexAt from '../../src/run/runIndexAt';
+import runIndexAt from '../../src/run/runIndexAt.js';
 
 const runs = [
   { start: 0, end: 6 },

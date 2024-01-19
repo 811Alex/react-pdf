@@ -1,4 +1,4 @@
-import scale from './scale';
+import scale from './scale.js';
 
 /**
  * Get run descent
@@ -6,7 +6,7 @@ import scale from './scale';
  * @param {Object}  run
  * @returns {number} descent
  */
-const descent = run => {
+const descent = (run) => {
   const fontDescent = run.attributes?.font?.descent || 0;
 
   return scale(run) * fontDescent;

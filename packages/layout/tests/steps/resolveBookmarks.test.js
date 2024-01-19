@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolveBookmarks from '../../src/steps/resolveBookmarks';
+import resolveBookmarks from '../../src/steps/resolveBookmarks.js';
 
 describe('layout resolveBookmarks', () => {
   test('should keep nodes the same if no bookmark passed', () => {

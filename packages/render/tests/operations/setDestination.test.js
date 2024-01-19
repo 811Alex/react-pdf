@@ -2,8 +2,8 @@ import { describe, expect, test } from 'vitest';
 
 import * as P from '@react-pdf/primitives';
 
-import createCTX from '../ctx';
-import setDestination from '../../src/operations/setDestination';
+import createCTX from '../ctx.js';
+import setDestination from '../../src/operations/setDestination.js';
 
 describe('operations setDestination', () => {
   test('should call addNamedDestination method to passed context if id present', () => {

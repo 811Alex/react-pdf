@@ -1,4 +1,4 @@
-import runAdvanceWidth from '../run/advanceWidth';
+import runAdvanceWidth from '../run/advanceWidth.js';
 
 /**
  * Returns attributed string advancewidth
@@ -6,7 +6,7 @@ import runAdvanceWidth from '../run/advanceWidth';
  * @param {Object} attributedString attributed string
  * @returns {number} advance width
  */
-const advanceWidth = attributedString => {
+const advanceWidth = (attributedString) => {
   const reducer = (acc, run) => acc + runAdvanceWidth(run);
   return attributedString.runs.reduce(reducer, 0);
 };

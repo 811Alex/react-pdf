@@ -1,6 +1,6 @@
 import { omit } from '@react-pdf/fns';
 
-import setPadding from './setPadding';
+import setPadding from './setPadding.js';
 
 const PADDING_PROPS = [
   'padding',
@@ -18,7 +18,7 @@ const PADDING_PROPS = [
  * @param {Object} node
  * @returns {Object} node without padding
  */
-const removePaddings = node => {
+const removePaddings = (node) => {
   const style = omit(PADDING_PROPS, node.style || {});
   const newNode = Object.assign({}, node, { style });
 

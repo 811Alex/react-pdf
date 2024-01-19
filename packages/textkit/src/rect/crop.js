@@ -1,4 +1,4 @@
-import partition from './partition';
+import partition from './partition.js';
 
 /**
  * Crop upper section of rect

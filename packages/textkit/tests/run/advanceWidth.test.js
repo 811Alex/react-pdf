@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import advanceWidth from '../../src/run/advanceWidth';
+import advanceWidth from '../../src/run/advanceWidth.js';
 
 describe('run advanceWidth operator', () => {
   test('should return 0 if positions not present', () => {

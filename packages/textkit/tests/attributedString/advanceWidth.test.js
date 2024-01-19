@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/attributedString/empty';
-import advanceWidth from '../../src/attributedString/advanceWidth';
+import empty from '../../src/attributedString/empty.js';
+import advanceWidth from '../../src/attributedString/advanceWidth.js';
 
 describe('attributeString advanceWidth operator', () => {
   test('should return 0 for empty string', () => {

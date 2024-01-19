@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import getOrigin from '../../src/node/getOrigin';
+import getOrigin from '../../src/node/getOrigin.js';
 
 describe('node getOrigin', () => {
   test('Should return empty object for node without box', () => {

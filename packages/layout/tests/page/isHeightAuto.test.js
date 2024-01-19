@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isHeightAuto from '../../src/page/isHeightAuto';
+import isHeightAuto from '../../src/page/isHeightAuto.js';
 
 describe('page isHeightAuto', () => {
   test('Should return false if height present', () => {

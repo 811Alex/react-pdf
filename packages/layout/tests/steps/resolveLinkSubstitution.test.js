@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolveLinkSubstitution from '../../src/steps/resolveLinkSubstitution';
+import resolveLinkSubstitution from '../../src/steps/resolveLinkSubstitution.js';
 
 describe('layout resolveStyles', () => {
   test('should leave link with text children as it is', () => {

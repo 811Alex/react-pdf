@@ -3,7 +3,7 @@ import fs from 'fs';
 import url from 'url';
 import path from 'path';
 import { Document, Page, View, Image } from '@react-pdf/renderer';
-import renderToImage from './renderComponent';
+import renderToImage from './renderComponent.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 

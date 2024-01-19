@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import setDisplay from '../../src/node/setDisplay';
+import setDisplay from '../../src/node/setDisplay.js';
 
 describe('node setDisplay', () => {
   const mock = vi.fn();

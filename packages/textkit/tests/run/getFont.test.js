@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import font from '../internal/font';
-import getFont from '../../src/run/getFont';
+import font from '../internal/font.js';
+import getFont from '../../src/run/getFont.js';
 
 describe('run getFont glyph operator', () => {
   test('should return null if run does not have attributes', () => {

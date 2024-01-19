@@ -3,13 +3,13 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-restricted-syntax */
 
-import Text from './text';
-import Vector from './vector';
-import Images from './images';
-import Styles from './styles';
-import Transform from './transform';
-import { createElement } from './element';
-import getSize from '../utils/getPageSize';
+import Text from './text.js';
+import Vector from './vector.js';
+import Images from './images.js';
+import Styles from './styles.js';
+import Transform from './transform.js';
+import { createElement } from './element.js';
+import getSize from '../utils/getPageSize.js';
 
 // const DEFAULT_MARGINS = {
 //   top: 0,

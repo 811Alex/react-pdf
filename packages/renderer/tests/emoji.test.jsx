@@ -1,12 +1,12 @@
 import { describe, expect, test } from 'vitest';
 
 import { Document, Page, Text, Font } from '@react-pdf/renderer';
-import renderToImage from './renderComponent';
+import renderToImage from './renderComponent.js';
 
 describe('emoji', () => {
   test('should support builder function', async () => {
     Font.registerEmojiSource({
-      builder: code =>
+      builder: (code) =>
         `https://cdn.jsdelivr.net/gh/shuding/fluentui-emoji-unicode/assets/${code.toLowerCase()}_3d.png`,
     });
 

@@ -1,11 +1,11 @@
 import { isNil } from '@react-pdf/fns';
 
-import copyRect from '../rect/copy';
-import cropRect from '../rect/crop';
-import blockHeight from '../block/height';
-import truncateBlock from '../block/truncate';
-import layoutParagraph from './layoutParagraph';
-import sliceBlockAtHeight from '../block/sliceAtHeight';
+import copyRect from '../rect/copy.js';
+import cropRect from '../rect/crop.js';
+import blockHeight from '../block/height.js';
+import truncateBlock from '../block/truncate.js';
+import layoutParagraph from './layoutParagraph.js';
+import sliceBlockAtHeight from '../block/sliceAtHeight.js';
 
 /**
  * @typedef {Function} TypeSetter

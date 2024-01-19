@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import indexAtOffset from '../../src/run/indexAtOffset';
+import indexAtOffset from '../../src/run/indexAtOffset.js';
 
 describe('run indexAtOffset operator', () => {
   test('should return 0 if positions not present', () => {

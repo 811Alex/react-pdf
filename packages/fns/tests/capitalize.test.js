@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import capitalize from '../src/capitalize';
+import capitalize from '../src/capitalize.js';
 
 describe('capitalize', () => {
   test('should return undefined for undefined', () => {

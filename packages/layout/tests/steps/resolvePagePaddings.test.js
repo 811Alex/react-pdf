@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolvePagePaddings from '../../src/steps/resolvePagePaddings';
+import resolvePagePaddings from '../../src/steps/resolvePagePaddings.js';
 
 describe('layout resolvePagePaddings', () => {
   test('Should keep other styles untouched', () => {

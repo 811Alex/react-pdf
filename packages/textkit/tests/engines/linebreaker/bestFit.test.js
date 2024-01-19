@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import applyBestFit from '../../../src/engines/linebreaker/bestFit';
+import applyBestFit from '../../../src/engines/linebreaker/bestFit.js';
 
 const width = 50;
 

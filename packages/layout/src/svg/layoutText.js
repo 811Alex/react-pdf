@@ -7,9 +7,9 @@ import layoutEngine, {
   textDecoration,
 } from '@react-pdf/textkit';
 
-import fromFragments from '../text/fromFragments';
-import transformText from '../text/transformText';
-import fontSubstitution from '../text/fontSubstitution';
+import fromFragments from '../text/fromFragments.js';
+import transformText from '../text/transformText.js';
+import fontSubstitution from '../text/fontSubstitution.js';
 
 const isTextInstance = node => node.type === P.TextInstance;
 

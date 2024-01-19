@@ -1,7 +1,7 @@
 import { get } from '@react-pdf/fns';
 
-import lineIndexAtHeight from './lineIndexAtHeight';
-import heightAtLineIndex from './heightAtLineIndex';
+import lineIndexAtHeight from './lineIndexAtHeight.js';
+import heightAtLineIndex from './heightAtLineIndex.js';
 
 const getLineBreak = (node, height) => {
   const top = get(node, ['box', 'top'], 0);

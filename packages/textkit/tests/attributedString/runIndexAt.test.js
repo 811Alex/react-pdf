@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import runIndexAt from '../../src/attributedString/runIndexAt';
+import runIndexAt from '../../src/attributedString/runIndexAt.js';
 
 const string = {
   string: 'hello world',

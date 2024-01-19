@@ -1,5 +1,5 @@
-import start from './start';
-import end from './end';
+import start from './start.js';
+import end from './end.js';
 
 /**
  * Get attributed string length
@@ -7,7 +7,7 @@ import end from './end';
  * @param {Object} attributedString glyph string
  * @returns {number} end
  */
-const length = attributedString => {
+const length = (attributedString) => {
   return end(attributedString) - start(attributedString);
 };
 

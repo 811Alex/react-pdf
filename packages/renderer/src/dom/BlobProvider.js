@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-import usePDF from './usePDF';
+import usePDF from './usePDF.js';
 
 export const BlobProvider = ({ document: doc, children }) => {
   const [instance, updateInstance] = usePDF();

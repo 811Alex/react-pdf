@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/rect/empty';
-import bottomRight from '../../src/rect/bottomRight';
+import empty from '../../src/rect/empty.js';
+import bottomRight from '../../src/rect/bottomRight.js';
 
 describe('rect bottomRight operator', () => {
   test('should return zero point if no rect provided', () => {

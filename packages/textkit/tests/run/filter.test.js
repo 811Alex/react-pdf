@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import filter from '../../src/run/filter';
+import filter from '../../src/run/filter.js';
 
 describe('run filter operator', () => {
   test('should return empty array if no runs passed', () => {

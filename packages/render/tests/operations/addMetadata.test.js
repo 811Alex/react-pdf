@@ -2,8 +2,8 @@ import { describe, expect, test } from 'vitest';
 
 import * as P from '@react-pdf/primitives';
 
-import createCTX from '../ctx';
-import addMetadata from '../../src/operations/addMetadata';
+import createCTX from '../ctx.js';
+import addMetadata from '../../src/operations/addMetadata.js';
 
 describe('operations addMetadata', () => {
   test('should not add title metadata if none provided', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import parseColor from '../../src/utils/parseColor';
+import parseColor from '../../src/utils/parseColor.js';
 
 describe('parse color util', () => {
   test(`should parse regular hex color`, () => {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import descent from '../../src/run/descent';
+import descent from '../../src/run/descent.js';
 
 describe('run descent operator', () => {
   test('should return 0 if font no attributes present', () => {

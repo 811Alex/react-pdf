@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import scriptItemizer from '../../src/engines/scriptItemizer';
+import scriptItemizer from '../../src/engines/scriptItemizer/index.js';
 
 const instance = scriptItemizer();
 

@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-escape */
 
-import { createElement } from './element';
+import { createElement } from './element.js';
 
 export default {
   text(text, x, y) {

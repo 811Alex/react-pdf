@@ -7,7 +7,7 @@ import setPosition, {
   setPositionRight,
   setPositionBottom,
   setPositionLeft,
-} from '../../src/node/setPosition';
+} from '../../src/node/setPosition.js';
 
 describe('node setPosition', () => {
   const mock = vi.fn();

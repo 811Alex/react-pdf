@@ -1,7 +1,7 @@
 import { last } from '@react-pdf/fns';
 
-import length from './length';
-import normalizeIndices from '../indices/normalize';
+import length from './length.js';
+import normalizeIndices from '../indices/normalize.js';
 
 /**
  * Concats two runs into one
@@ -19,7 +19,9 @@ const concat = (runA, runB) => {
 
   const runAIndices = runA.glyphIndices || [];
   const runALastIndex = last(runAIndices) || 0;
-  const runBIndices = (runB.glyphIndices || []).map(i => i + runALastIndex + 1);
+  const runBIndices = (runB.glyphIndices || []).map(
+    (i) => i + runALastIndex + 1,
+  );
   const glyphIndices = normalizeIndices(runAIndices.concat(runBIndices));
 
   return Object.assign({}, runA, {

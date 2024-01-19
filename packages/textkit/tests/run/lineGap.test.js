@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import lineGap from '../../src/run/lineGap';
+import lineGap from '../../src/run/lineGap.js';
 
 describe('run lineGap operator', () => {
   test('should return 0 if font not present', () => {

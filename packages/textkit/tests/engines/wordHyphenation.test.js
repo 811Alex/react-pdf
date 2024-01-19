@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 
-const hyphenator = vi.fn(v => {
+const hyphenator = vi.fn((v) => {
   if (v === '') return '';
   if (v === 'something') return 'some\u00adthing';
   if (v === 'neumonia') return 'neu\u00admo\u00adnia';
@@ -11,8 +11,9 @@ const hyphenator = vi.fn(v => {
 
 vi.mock('hyphen', () => ({ default: () => hyphenator }));
 
-const wordHyphenation = (await import('../../src/engines/wordHyphenation'))
-  .default;
+const wordHyphenation = (
+  await import('../../src/engines/wordHyphenation/index.js')
+).default;
 
 const instance = wordHyphenation();
 

@@ -1,8 +1,8 @@
-import { Style } from './style';
-import { Primitive } from './primitive';
-import { HyphenationCallback } from './font';
-import { PageSize, Orientation } from './page';
-import { Bookmark } from './bookmark';
+import { Style } from './style.js';
+import { Primitive } from './primitive.js';
+import { HyphenationCallback } from './font.js';
+import { PageSize, Orientation } from './page.js';
+import { Bookmark } from './bookmark.js';
 
 interface BaseProps {
   id?: string;

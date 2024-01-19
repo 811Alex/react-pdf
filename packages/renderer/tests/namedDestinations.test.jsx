@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
 import { Document, Font, Link, Page, Text, View } from '@react-pdf/renderer';
-import renderToImage from './renderComponent';
+import renderToImage from './renderComponent.js';
 
 Font.register({
   family: 'Lato',

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import pluck from '../internal/pluck';
-import concat from '../../src/run/concat';
+import pluck from '../internal/pluck.js';
+import concat from '../../src/run/concat.js';
 
 describe('run concat operator', () => {
   test('should concat with empty run return same run', () => {

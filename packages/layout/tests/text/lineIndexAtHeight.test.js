@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import lineIndexAtHeight from '../../src/text/lineIndexAtHeight';
+import lineIndexAtHeight from '../../src/text/lineIndexAtHeight.js';
 
 const TEST_LINE = { box: { height: 25 } };
 const TEST_LINES = Array(10).fill(TEST_LINE);

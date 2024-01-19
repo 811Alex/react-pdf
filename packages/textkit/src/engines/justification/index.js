@@ -2,9 +2,9 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-restricted-syntax */
 
-import getFactors from './getFactors';
-import getDistances from './getDistances';
-import advanceWidth from '../../attributedString/advanceWidth';
+import getFactors from './getFactors.js';
+import getDistances from './getDistances.js';
+import advanceWidth from '../../attributedString/advanceWidth.js';
 
 /**
  * Adjust run positions by given distances

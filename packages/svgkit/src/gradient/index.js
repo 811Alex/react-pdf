@@ -1,7 +1,7 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable max-classes-per-file */
 
-import uuid from '../utils/uuid';
+import uuid from '../utils/uuid.js';
 
 export class Gradient {
   constructor(x1, y1, x2, y2) {
@@ -19,7 +19,8 @@ export class Gradient {
 
     if (color.indexOf('rgba') !== -1) {
       // Separate alpha value, since webkit can't handle it
-      const regex = /rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d?\.?\d*)\s*\)/gi;
+      const regex =
+        /rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d?\.?\d*)\s*\)/gi;
       const matches = regex.exec(color);
 
       stop.color = `rgb(${matches[1]},{${matches[2]}},${matches[3]})`;

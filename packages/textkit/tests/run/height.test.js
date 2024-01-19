@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import height from '../../src/run/height';
+import height from '../../src/run/height.js';
 
 describe('run height operator', () => {
   test('should return 0 if font no attributes present', () => {

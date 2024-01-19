@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import scale from '../../src/run/scale';
+import scale from '../../src/run/scale.js';
 
 describe('run scale operator', () => {
   test('should return 0 if font not present', () => {

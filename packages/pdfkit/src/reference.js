@@ -1,6 +1,6 @@
 import zlib from 'zlib';
 import stream from 'stream';
-import PDFObject from './object';
+import PDFObject from './object.js';
 
 class PDFReference extends stream.Writable {
   constructor(document, id, data) {
@@ -25,7 +25,7 @@ class PDFReference extends stream.Writable {
     this.data.Filter = 'FlateDecode';
 
     this.deflate = zlib.createDeflate();
-    this.deflate.on('data', chunk => {
+    this.deflate.on('data', (chunk) => {
       this.chunks.push(chunk);
       return (this.data.Length += chunk.length);
     });

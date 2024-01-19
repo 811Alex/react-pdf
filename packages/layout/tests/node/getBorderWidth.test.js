@@ -2,7 +2,7 @@ import { describe, expect, test } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import getBorderWidth from '../../src/node/getBorderWidth';
+import getBorderWidth from '../../src/node/getBorderWidth.js';
 
 const getComputedBorder = value => {
   if (value === Yoga.Edge.Top) return 1;

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import getSize from '../../src/page/getSize';
+import getSize from '../../src/page/getSize.js';
 
 describe('page getSize', () => {
   test('Should default to A4', () => {

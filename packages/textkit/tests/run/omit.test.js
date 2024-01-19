@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import omit from '../../src/run/omit';
+import omit from '../../src/run/omit.js';
 
 describe('run omit operator', () => {
   test('should omit passed attribute', () => {

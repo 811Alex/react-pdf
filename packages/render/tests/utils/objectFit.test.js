@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolveObjectFit from '../../src/utils/resolveObjectFit';
+import resolveObjectFit from '../../src/utils/resolveObjectFit.js';
 
 describe('object-fit', () => {
   test('should fill to content box for portrait images', () => {

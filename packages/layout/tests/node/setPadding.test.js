@@ -7,7 +7,7 @@ import setPadding, {
   setPaddingRight,
   setPaddingBottom,
   setPaddingLeft,
-} from '../../src/node/setPadding';
+} from '../../src/node/setPadding.js';
 
 describe('node setPadding', () => {
   const mock = vi.fn();

@@ -1,4 +1,4 @@
-import processBoxModel from './boxModel';
+import processBoxModel from './boxModel.js';
 
 const processMargin = processBoxModel({
   expandsTo: ({ first, second, third, fourth }) => ({

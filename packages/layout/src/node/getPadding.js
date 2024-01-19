@@ -11,7 +11,7 @@ const getComputedPadding = (node, edge) => {
  * @param {Object} node
  * @returns {{ paddingTop: number, paddingRight: number, paddingBottom: number, paddingLeft: number }} paddings
  */
-const getPadding = (node) => {
+const getPadding = node => {
   const { style, box } = node;
 
   const paddingTop =

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import subtract from '../../src/run/subtract';
+import subtract from '../../src/run/subtract.js';
 
 describe('run subtract operator', () => {
   test('should return equal run if 0', () => {

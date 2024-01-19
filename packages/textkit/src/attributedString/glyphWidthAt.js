@@ -1,5 +1,5 @@
-import runAt from './runAt';
-import glyphIndexAt from '../run/glyphIndexAt';
+import runAt from './runAt.js';
+import glyphIndexAt from '../run/glyphIndexAt.js';
 
 /**
  * Get glyph width at string index

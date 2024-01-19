@@ -1,6 +1,6 @@
-import sliceRun from '../run/slice';
-import filterRuns from '../run/filter';
-import subtractRun from '../run/subtract';
+import sliceRun from '../run/slice.js';
+import filterRuns from '../run/filter.js';
+import subtractRun from '../run/subtract.js';
 
 /**
  * Slice array of runs

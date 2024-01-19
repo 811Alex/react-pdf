@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/attributedString/empty';
-import end from '../../src/attributedString/end';
+import empty from '../../src/attributedString/empty.js';
+import end from '../../src/attributedString/end.js';
 
 describe('attributeString end operator', () => {
   test('should return 0 for empty string', () => {

@@ -2,7 +2,7 @@ import { describe, expect, test } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import getMargin from '../../src/node/getMargin';
+import getMargin from '../../src/node/getMargin.js';
 
 const getComputedMargin = value => {
   if (value === Yoga.Edge.Top) return 1;

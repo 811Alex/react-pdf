@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import offset from '../../src/run/offset';
+import offset from '../../src/run/offset.js';
 
 describe('run offset operator', () => {
   test('should return always 0 if no glyphIndices present', () => {

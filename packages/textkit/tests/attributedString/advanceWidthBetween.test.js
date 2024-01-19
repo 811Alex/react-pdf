@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/attributedString/empty';
-import advanceWidthBetween from '../../src/attributedString/advanceWidthBetween';
+import empty from '../../src/attributedString/empty.js';
+import advanceWidthBetween from '../../src/attributedString/advanceWidthBetween.js';
 
 describe('attributeString advanceWidthBetween operator', () => {
   test('should return 0 for empty string', () => {

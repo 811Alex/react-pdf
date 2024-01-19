@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import leadingOffset from '../../src/attributedString/leadingOffset';
+import leadingOffset from '../../src/attributedString/leadingOffset.js';
 
 describe('attributeString leadingOffset operator', () => {
   test('should return zero for single run string without spaces', () => {

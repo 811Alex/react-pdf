@@ -1,7 +1,7 @@
 /* eslint-disable no-void */
 import { describe, expect, test } from 'vitest';
 
-import isNil from '../src/isNil';
+import isNil from '../src/isNil.js';
 
 describe('isNil', () => {
   test('tests a value for `null` or `undefined`', () => {

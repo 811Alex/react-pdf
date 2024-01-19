@@ -1,10 +1,10 @@
-import AFMFont from './afm';
+import AFMFont from './afm.js';
 import data from './data/index.json';
-import expandData from './data/expandData';
+import expandData from './data/expandData.js';
 
 const STANDARD_FONTS = expandData(data);
 
-const createStandardFont = PDFFont =>
+const createStandardFont = (PDFFont) =>
   class StandardFont extends PDFFont {
     constructor(document, name, id) {
       super();

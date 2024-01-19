@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import getBoundingBox from '../../src/svg/getBoundingBox';
+import getBoundingBox from '../../src/svg/getBoundingBox.js';
 
 describe('path getBoundingBox', () => {
   test('should return empty path bounding box', () => {

@@ -1,4 +1,4 @@
-import PDFOutline from '../outline';
+import PDFOutline from '../outline.js';
 
 export default {
   initOutline() {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/rect/empty';
+import empty from '../../src/rect/empty.js';
 
 describe('rect empty operator', () => {
   test('should return empty rect', () => {

@@ -2,7 +2,7 @@
 PDFTree - abstract base class for name and number tree objects
 */
 
-import PDFObject from './object';
+import PDFObject from './object.js';
 
 class PDFTree {
   constructor(options = {}) {

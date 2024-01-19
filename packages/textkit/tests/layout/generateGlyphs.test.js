@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'vitest';
 
-import font from '../internal/font';
-import pluck from '../internal/pluck';
-import generateGlyphs from '../../src/layout/generateGlyphs';
+import font from '../internal/font.js';
+import pluck from '../internal/pluck.js';
+import generateGlyphs from '../../src/layout/generateGlyphs.js';
 
 const instance = generateGlyphs();
 
@@ -43,18 +43,10 @@ describe('generateGlyphs', () => {
     expect(result.runs[0]).toHaveProperty('end', 5);
     expect(result.runs[0].glyphIndices).toEqual([0, 1, 2, 3, 4]);
     expect(pluck('id', result.runs[0].glyphs)).toEqual([
-      76,
-      111,
-      114,
-      101,
-      109,
+      76, 111, 114, 101, 109,
     ]);
     expect(pluck('xAdvance', result.runs[0].positions)).toEqual([
-      8,
-      8,
-      8,
-      8,
-      8,
+      8, 8, 8, 8, 8,
     ]);
   });
 
@@ -127,22 +119,10 @@ describe('generateGlyphs', () => {
     expect(result.runs[0]).toHaveProperty('end', 10);
     expect(result.runs[0].glyphIndices).toEqual([0, 1, 2, 2, 3, 4, 4, 4, 5, 6]);
     expect(pluck('id', result.runs[0].glyphs)).toEqual([
-      76,
-      111,
-      64257,
-      109,
-      64259,
-      100,
-      111,
+      76, 111, 64257, 109, 64259, 100, 111,
     ]);
     expect(pluck('xAdvance', result.runs[0].positions)).toEqual([
-      8,
-      8,
-      10,
-      8,
-      10,
-      8,
-      8,
+      8, 8, 10, 8, 10, 8, 8,
     ]);
   });
 

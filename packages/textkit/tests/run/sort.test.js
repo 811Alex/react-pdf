@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import sort from '../../src/run/sort';
+import sort from '../../src/run/sort.js';
 
 describe('run sort operator', () => {
   test('should sort no runs', () => {

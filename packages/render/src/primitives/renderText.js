@@ -1,12 +1,12 @@
 /* eslint-disable no-param-reassign */
 import { isNil } from '@react-pdf/fns';
 
-import renderGlyphs from './renderGlyphs';
-import parseColor from '../utils/parseColor';
+import renderGlyphs from './renderGlyphs.js';
+import parseColor from '../utils/parseColor.js';
 
 const DEST_REGEXP = /^#.+/;
 
-const isSrcId = src => src.match(DEST_REGEXP);
+const isSrcId = (src) => src.match(DEST_REGEXP);
 
 const renderAttachment = (ctx, attachment) => {
   const { xOffset = 0, yOffset = 0, width, height, image } = attachment;
@@ -209,7 +209,7 @@ const renderLine = (ctx, line, options) => {
 };
 
 const renderBlock = (ctx, block, options) => {
-  block.forEach(line => {
+  block.forEach((line) => {
     renderLine(ctx, line, options);
   });
 };
@@ -225,7 +225,7 @@ const renderText = (ctx, node) => {
   ctx.save();
   ctx.translate(left + paddingLeft - offsetX, top + paddingTop - initialY);
 
-  blocks.forEach(block => {
+  blocks.forEach((block) => {
     renderBlock(ctx, block, {});
   });
 

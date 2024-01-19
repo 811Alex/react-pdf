@@ -1,19 +1,19 @@
 import * as P from '@react-pdf/primitives';
 import { isNil } from '@react-pdf/fns';
 
-import renderPath from './renderPath';
-import renderRect from './renderRect';
-import renderLine from './renderLine';
-import renderGroup from './renderGroup';
-import renderCircle from './renderCircle';
-import renderSvgText from './renderSvgText';
-import renderEllipse from './renderEllipse';
-import renderPolygon from './renderPolygon';
-import renderPolyline from './renderPolyline';
-import renderSvgImage from './renderSvgImage';
-import clipNode from '../operations/clipNode';
-import transform from '../operations/transform';
-import getBoundingBox from '../svg/getBoundingBox';
+import renderPath from './renderPath.js';
+import renderRect from './renderRect.js';
+import renderLine from './renderLine.js';
+import renderGroup from './renderGroup.js';
+import renderCircle from './renderCircle.js';
+import renderSvgText from './renderSvgText.js';
+import renderEllipse from './renderEllipse.js';
+import renderPolygon from './renderPolygon.js';
+import renderPolyline from './renderPolyline.js';
+import renderSvgImage from './renderSvgImage.js';
+import clipNode from '../operations/clipNode.js';
+import transform from '../operations/transform.js';
+import getBoundingBox from '../svg/getBoundingBox.js';
 
 const setStrokeWidth = (ctx, node) => {
   const lineWidth = node.props?.strokeWidth || 0;
@@ -56,10 +56,10 @@ const setLineDash = (ctx, node) => {
   if (value) ctx.dash(value.split(',').map(Number));
 };
 
-const hasLinearGradientFill = node =>
+const hasLinearGradientFill = (node) =>
   node.props?.fill?.type === P.LinearGradient;
 
-const hasRadialGradientFill = node =>
+const hasRadialGradientFill = (node) =>
   node.props?.fill?.type === P.RadialGradient;
 
 // Math simplified from https://github.com/devongovett/svgkit/blob/master/src/elements/SVGGradient.js#L104
@@ -84,7 +84,7 @@ const setLinearGradientFill = (ctx, node) => {
 
   const grad = ctx.linearGradient(gx1, gy1, gx2, gy2);
 
-  gradient.children.forEach(stop => {
+  gradient.children.forEach((stop) => {
     grad.stop(stop.props.offset, stop.props.stopColor, stop.props.stopOpacity);
   });
 
@@ -115,7 +115,7 @@ const setRadialGradientFill = (ctx, node) => {
 
   const grad = ctx.radialGradient(gfx, gfy, 0, gcx, gcy, gr);
 
-  gradient.children.forEach(stop => {
+  gradient.children.forEach((stop) => {
     grad.stop(stop.props.offset, stop.props.stopColor, stop.props.stopOpacity);
   });
 
@@ -199,7 +199,7 @@ const clipPath = (ctx, node) => {
 
   if (value) {
     const children = value.children || [];
-    children.forEach(child => renderNode(ctx, child));
+    children.forEach((child) => renderNode(ctx, child));
     ctx.clip();
   }
 };
@@ -207,7 +207,7 @@ const clipPath = (ctx, node) => {
 const drawChildren = (ctx, node) => {
   const children = node.children || [];
 
-  children.forEach(child => {
+  children.forEach((child) => {
     ctx.save();
 
     clipPath(ctx, child);

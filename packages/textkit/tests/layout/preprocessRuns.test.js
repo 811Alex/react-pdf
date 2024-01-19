@@ -1,10 +1,12 @@
 import { beforeEach, describe, expect, test } from 'vitest';
-import empty from '../../src/attributedString/empty';
-import preprocessRuns from '../../src/layout/preprocessRuns';
-import scriptItemizer, { scriptItemizerImpl } from '../internal/scriptItemizer';
+import empty from '../../src/attributedString/empty.js';
+import preprocessRuns from '../../src/layout/preprocessRuns.js';
+import scriptItemizer, {
+  scriptItemizerImpl,
+} from '../internal/scriptItemizer.js';
 import fontSubstitution, {
   fontSubstitutionImpl,
-} from '../internal/fontSubstitutionEngine';
+} from '../internal/fontSubstitutionEngine.js';
 
 const preprocessor = preprocessRuns({ scriptItemizer, fontSubstitution });
 

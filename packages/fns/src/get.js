@@ -1,5 +1,5 @@
-import isNil from './isNil';
-import castArray from './castArray';
+import isNil from './isNil.js';
+import castArray from './castArray.js';
 
 const get = (target, path, defaultValue) => {
   if (isNil(target)) return defaultValue;

@@ -3,7 +3,7 @@
 import queue from 'queue';
 import { useState, useRef, useEffect, useCallback } from 'react';
 
-import { pdf } from '../index';
+import { pdf } from '../index.js';
 
 /**
  * PDF hook

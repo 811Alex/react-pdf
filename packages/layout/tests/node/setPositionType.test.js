@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import * as Yoga from 'yoga-layout';
 
-import setPositionType from '../../src/node/setPositionType';
+import setPositionType from '../../src/node/setPositionType.js';
 
 describe('node setPositionType', () => {
   const mock = vi.fn();

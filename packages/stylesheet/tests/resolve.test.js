@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolve from '../src/index';
+import resolve from '../src/index.js';
 
 describe('stylesheet resolve', () => {
   test('should return empty object for undefined', () => {

@@ -1,7 +1,7 @@
 import * as P from '@react-pdf/primitives';
 
-import fetchEmojis from '../text/emoji';
-import fetchImage from '../image/fetchImage';
+import fetchEmojis from '../text/emoji.js';
+import fetchImage from '../image/fetchImage.js';
 
 const isImage = (node) => node.type === P.Image;
 

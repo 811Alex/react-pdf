@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable prefer-destructuring */
 
-import uuid from '../utils/uuid';
-import { Gradient } from '../gradient';
-import { createElement } from './element';
+import uuid from '../utils/uuid.js';
+import { Gradient } from '../gradient/index.js';
+import { createElement } from './element.js';
 
 export default {
   beginPath() {
@@ -96,7 +96,7 @@ export default {
 
     const element = createElement(gradient.type, gradient.attributes);
 
-    gradient.stops.forEach(stop => {
+    gradient.stops.forEach((stop) => {
       const stopChild = createElement('stop');
 
       stopChild.setAttribute('offset', stop.offset);

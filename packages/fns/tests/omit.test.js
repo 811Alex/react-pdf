@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import omit from '../src/omit';
+import omit from '../src/omit.js';
 
 describe('omit', () => {
   const obj = { a: 1, b: 2, c: 3 };

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import intersects from '../../src/rect/intersects';
+import intersects from '../../src/rect/intersects.js';
 
 describe('rect intersects operator', () => {
   test('should not intesect on top-left corner', () => {

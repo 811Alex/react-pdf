@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import equals from '../../src/rect/equals';
+import equals from '../../src/rect/equals.js';
 
 describe('rect equals operator', () => {
   test('should return false for different rects', () => {

@@ -3,10 +3,10 @@ Markings mixin - support marked content sequences in content streams
 By Ben Schmidt
 */
 
-import PDFStructureElement from '../structure_element';
-import PDFStructureContent from '../structure_content';
-import PDFNumberTree from '../number_tree';
-import PDFObject from '../object';
+import PDFStructureElement from '../structure_element.js';
+import PDFStructureContent from '../structure_content.js';
+import PDFNumberTree from '../number_tree.js';
+import PDFObject from '../object.js';
 
 export default {
   initMarkings(options) {

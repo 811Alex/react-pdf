@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import empty from '../../src/attributedString/empty';
-import height from '../../src/attributedString/height';
+import empty from '../../src/attributedString/empty.js';
+import height from '../../src/attributedString/height.js';
 
 const font = { descent: 10, ascent: 15, lineGap: 5, unitsPerEm: 2 };
 

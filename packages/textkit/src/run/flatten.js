@@ -1,5 +1,5 @@
-import sort from './sort';
-import isEmpty from './isEmpty';
+import sort from './sort.js';
+import isEmpty from './isEmpty.js';
 
 const sortPoints = (a, b) => a[1] - b[1] || a[3] - b[3];
 

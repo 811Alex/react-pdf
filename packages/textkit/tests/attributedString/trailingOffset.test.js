@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import trailingOffset from '../../src/attributedString/trailingOffset';
+import trailingOffset from '../../src/attributedString/trailingOffset.js';
 
 describe('attributeString trailingOffset operator', () => {
   test('should return zero for single run string without spaces', () => {

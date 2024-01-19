@@ -9,10 +9,10 @@ import {
   StyleSheet,
 } from '@react-pdf/renderer';
 
-import Header from './Header';
-import Skills from './Skills';
-import Education from './Education';
-import Experience from './Experience';
+import Header from './Header.js';
+import Skills from './Skills.js';
+import Education from './Education.js';
+import Experience from './Experience.js';
 
 const styles = StyleSheet.create({
   page: {
@@ -76,7 +76,7 @@ Font.register({
   src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`,
 });
 
-const Resume = props => (
+const Resume = (props) => (
   <Page {...props} style={styles.page}>
     <Header />
     <View style={styles.container}>

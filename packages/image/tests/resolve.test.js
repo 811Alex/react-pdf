@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import url from 'url';
 
-import resolveImage, { IMAGE_CACHE } from '../src/resolve';
+import resolveImage, { IMAGE_CACHE } from '../src/resolve.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -112,8 +112,7 @@ describe('image resolveImage', () => {
 
   test('Should render a base64 image', async () => {
     const image = await resolveImage({
-      uri:
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==',
+      uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==',
     });
 
     expect(image.data).toBeTruthy();

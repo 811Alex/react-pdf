@@ -1,5 +1,5 @@
-import intersects from '../rect/intersects';
-import partition from '../rect/partition';
+import intersects from '../rect/intersects.js';
+import partition from '../rect/partition.js';
 
 const getLineFragment = (lineRect, excludeRect) => {
   if (!intersects(excludeRect, lineRect)) return [lineRect];
@@ -12,7 +12,7 @@ const getLineFragment = (lineRect, excludeRect) => {
   const a = Object.assign({}, lineRect, { width: eStart - lStart });
   const b = Object.assign({}, lineRect, { x: eEnd, width: lEnd - eEnd });
 
-  return [a, b].filter(r => r.width > 0);
+  return [a, b].filter((r) => r.width > 0);
 };
 
 const getLineFragments = (rect, excludeRects) => {
@@ -36,7 +36,7 @@ const generateLineRects = (container, height) => {
   if (!excludeRects) return [rect];
 
   const lineRects = [];
-  const maxY = Math.max(...excludeRects.map(r => r.y + r.height));
+  const maxY = Math.max(...excludeRects.map((r) => r.y + r.height));
 
   let currentRect = rect;
 

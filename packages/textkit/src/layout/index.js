@@ -1,15 +1,15 @@
 import { compose } from '@react-pdf/fns';
 
-import wrapWords from './wrapWords';
-import typesetter from './typesetter';
-import generateGlyphs from './generateGlyphs';
-import resolveYOffset from './resolveYOffset';
-import preprocessRuns from './preprocessRuns';
-import splitParagraphs from './splitParagraphs';
-import finalizeFragments from './finalizeFragments';
-import resolveAttachments from './resolveAttachments';
-import applyDefaultStyles from './applyDefaultStyles';
-import verticalAlignment from './verticalAlign';
+import wrapWords from './wrapWords.js';
+import typesetter from './typesetter.js';
+import generateGlyphs from './generateGlyphs.js';
+import resolveYOffset from './resolveYOffset.js';
+import preprocessRuns from './preprocessRuns.js';
+import splitParagraphs from './splitParagraphs.js';
+import finalizeFragments from './finalizeFragments.js';
+import resolveAttachments from './resolveAttachments.js';
+import applyDefaultStyles from './applyDefaultStyles.js';
+import verticalAlignment from './verticalAlign.js';
 
 /**
  * @typedef {Function} LayoutEngine
@@ -29,25 +29,27 @@ import verticalAlignment from './verticalAlign';
  * @param {Object} engines engines
  * @returns {LayoutEngine} layout engine
  */
-const layoutEngine = engines => (attributedString, container, options = {}) => {
-  const processParagraph = compose(
-    resolveYOffset(),
-    resolveAttachments(),
-    generateGlyphs(),
-    verticalAlignment(),
-    wrapWords(engines, options),
-  );
+const layoutEngine =
+  (engines) =>
+  (attributedString, container, options = {}) => {
+    const processParagraph = compose(
+      resolveYOffset(),
+      resolveAttachments(),
+      generateGlyphs(),
+      verticalAlignment(),
+      wrapWords(engines, options),
+    );
 
-  const processParagraphs = paragraphs => paragraphs.map(processParagraph);
+    const processParagraphs = (paragraphs) => paragraphs.map(processParagraph);
 
-  return compose(
-    finalizeFragments(engines, options),
-    typesetter(engines, options, container),
-    processParagraphs,
-    splitParagraphs(),
-    preprocessRuns(engines, options),
-    applyDefaultStyles(),
-  )(attributedString);
-};
+    return compose(
+      finalizeFragments(engines, options),
+      typesetter(engines, options, container),
+      processParagraphs,
+      splitParagraphs(),
+      preprocessRuns(engines, options),
+      applyDefaultStyles(),
+    )(attributedString);
+  };
 
 export default layoutEngine;

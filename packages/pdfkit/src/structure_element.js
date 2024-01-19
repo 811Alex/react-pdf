@@ -3,7 +3,7 @@ PDFStructureElement - represents an element in the PDF logical structure tree
 By Ben Schmidt
 */
 
-import PDFStructureContent from './structure_content';
+import PDFStructureContent from './structure_content.js';
 
 class PDFStructureElement {
   constructor(document, type, options = {}, children = null) {

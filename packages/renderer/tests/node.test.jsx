@@ -4,7 +4,7 @@ import { describe, expect, test, vi } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import url from 'url';
-import ReactPDF from '../src/node';
+import ReactPDF from '../src/node/index.js';
 
 const { Document, Page, View } = ReactPDF;
 

@@ -1,6 +1,6 @@
 import unicode from 'unicode-properties';
 
-import empty from '../../attributedString/empty';
+import empty from '../../attributedString/empty.js';
 
 const ignoredScripts = ['Common', 'Inherited', 'Unknown'];
 
@@ -15,7 +15,7 @@ const ignoredScripts = ['Common', 'Inherited', 'Unknown'];
  *
  * @returns {ScriptItemizer} script itemizer
  */
-const scriptItemizer = () => attributedString => {
+const scriptItemizer = () => (attributedString) => {
   const { string } = attributedString;
 
   let lastScript = 'Unknown';

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import isNumber from '../../src/utils/isNumber';
+import isNumber from '../../src/utils/isNumber.js';
 
 describe('utils isNumber operator', () => {
   test('should return true for number argument', () => {

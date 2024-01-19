@@ -1,3 +1,3 @@
-import SVGDocument from './document';
+import SVGDocument from './document/index.js';
 
 export default SVGDocument;

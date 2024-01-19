@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
 import { Document, Page, Link, Font, Text } from '@react-pdf/renderer';
-import renderToImage from './renderComponent';
+import renderToImage from './renderComponent.js';
 
 // pdf.js does not render default fonts in node and I use Open Sans (:
 Font.register({
@@ -9,7 +9,7 @@ Font.register({
   src: 'https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf',
 });
 
-const mount = async children => {
+const mount = async (children) => {
   const image = await renderToImage(
     <Document>
       <Page size={[50, 25]}>{children}</Page>

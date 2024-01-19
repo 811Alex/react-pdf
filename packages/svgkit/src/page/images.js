@@ -1,4 +1,4 @@
-import { createElement } from './element';
+import { createElement } from './element.js';
 
 export default {
   image(href, x, y, width, height) {

@@ -7,7 +7,7 @@ import setMargin, {
   setMarginRight,
   setMarginBottom,
   setMarginLeft,
-} from '../../src/node/setMargin';
+} from '../../src/node/setMargin.js';
 
 describe('node setMargin', () => {
   const mock = vi.fn();

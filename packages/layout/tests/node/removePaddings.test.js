@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import removePaddings from '../../src/node/removePaddings';
+import removePaddings from '../../src/node/removePaddings.js';
 
 describe('node removePaddings', () => {
   test('Should keep other styles untouched', () => {

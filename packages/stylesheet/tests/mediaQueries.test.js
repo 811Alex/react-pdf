@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import resolveMediaQueries from '../src/mediaQueries';
+import resolveMediaQueries from '../src/mediaQueries/index.js';
 
 describe('media queries', () => {
   test('should resolve max-height media queries on narrow container', () => {

@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'vitest';
 
-import font from '../internal/font';
-import pluck from '../internal/pluck';
-import prepend from '../../src/run/prepend';
+import font from '../internal/font.js';
+import pluck from '../internal/pluck.js';
+import prepend from '../../src/run/prepend.js';
 
 describe('run prepend glyph operator', () => {
   test('should return same run if no glyph provided', () => {

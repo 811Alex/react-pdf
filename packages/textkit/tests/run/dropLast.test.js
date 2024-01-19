@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
-import pluck from '../internal/pluck';
-import dropLast from '../../src/run/dropLast';
+import pluck from '../internal/pluck.js';
+import dropLast from '../../src/run/dropLast.js';
 
 describe('run dropLast operator', () => {
   test('should have one less char', () => {

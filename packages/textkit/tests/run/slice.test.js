@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'vitest';
 
-import font from '../internal/font';
-import pluck from '../internal/pluck';
-import slice from '../../src/run/slice';
+import font from '../internal/font.js';
+import pluck from '../internal/pluck.js';
+import slice from '../../src/run/slice.js';
 
 describe('run slice operator', () => {
   describe('slice start and end', () => {

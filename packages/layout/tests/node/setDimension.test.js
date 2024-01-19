@@ -6,7 +6,7 @@ import {
   setHeight,
   setMinHeight,
   setMaxHeight,
-} from '../../src/node/setDimension';
+} from '../../src/node/setDimension.js';
 
 describe('node setDimension', () => {
   const mockSetWidth = vi.fn();

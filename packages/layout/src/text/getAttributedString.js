@@ -1,9 +1,9 @@
 import * as P from '@react-pdf/primitives';
 
-import { embedEmojis } from './emoji';
-import ignoreChars from './ignoreChars';
-import fromFragments from './fromFragments';
-import transformText from './transformText';
+import { embedEmojis } from './emoji.js';
+import ignoreChars from './ignoreChars.js';
+import fromFragments from './fromFragments.js';
+import transformText from './transformText.js';
 
 const PREPROCESSORS = [ignoreChars, embedEmojis];
 
