@@ -1,11 +1,15 @@
 /**
+ * @typedef {import('../types.js').Glyph} Glyph
+ * @typedef {import('../types.js').Font} Font
+ */
+
+/**
  * Get glyph for a given code point
  *
  * @param {number} [value] codePoint
- * @param {Object} [font] font
- * @returns {Object} glyph
+ * @param {Font} [font] font
+ * @returns {Glyph} glyph
  * */
-const fromCodePoint = (value, font) =>
-  font && value ? font.glyphForCodePoint(value) : null;
-
-export default fromCodePoint;
+export default function fromCodePoint(value, font) {
+  return font && value ? font.glyphForCodePoint(value) : null;
+}
