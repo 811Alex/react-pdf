@@ -39,11 +39,22 @@ class PDFGradient {
     return this;
   }
 
+  /**
+   * @param {number} m11
+   * @param {number} m12
+   * @param {number} m21
+   * @param {number} m22
+   * @param {number} dx
+   * @param {number} dy
+   */
   setTransform(m11, m12, m21, m22, dx, dy) {
     this.transform = [m11, m12, m21, m22, dx, dy];
     return this;
   }
 
+  /**
+   * @param {number[]} m
+   */
   embed(m) {
     let fn;
     const stopsLength = this.stops.length;
@@ -203,6 +214,17 @@ class PDFGradient {
     this.doc._setColorSpace('Pattern', stroke);
     const op = stroke ? 'SCN' : 'scn';
     return this.doc.addContent(`/${this.id} ${op}`);
+  }
+
+  opacityGradient() {
+    throw new Error('Must be implemented by subclasses');
+  }
+
+  /**
+   * @param {Function} fn
+   */
+  shader(fn) {
+    throw new Error('Must be implemented by subclasses');
   }
 }
 

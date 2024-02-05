@@ -1,9 +1,14 @@
 import { isNil, matchPercent } from '@react-pdf/fns';
 
 /**
+ * @typedef {import('../types.js').Page} Page
+ * @typedef {import('../types.js').Node} Node
+ */
+
+/**
  * Transform percent height into fixed
  *
- * @param {number} height
+ * @param {string | number} height
  * @returns {number} height
  */
 const transformHeight = (pageArea, height) => {
@@ -14,7 +19,7 @@ const transformHeight = (pageArea, height) => {
 /**
  * Get page area (height minus paddings)
  *
- * @param {Object} page
+ * @param {Page} page page
  * @returns {number} page area
  */
 const getPageArea = (page) => {
@@ -28,8 +33,8 @@ const getPageArea = (page) => {
 /**
  * Transform node percent height to fixed
  *
- * @param {Object} page
- * @param {Object} node
+ * @param {Page} page page
+ * @param {Node} node node
  * @returns {Object} transformed node
  */
 const resolveNodePercentHeight = (page, node) => {
@@ -46,8 +51,8 @@ const resolveNodePercentHeight = (page, node) => {
 /**
  * Transform page immediate children with percent height to fixed
  *
- * @param {Object} page
- * @returns {Object} transformed page
+ * @param {Page} page page
+ * @returns {Page} transformed page
  */
 const resolvePagePercentHeight = (page) => {
   if (!page.children) return page;

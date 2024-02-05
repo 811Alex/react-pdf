@@ -31,7 +31,20 @@ const swapBytes = function (buff) {
   return buff;
 };
 
+/**
+ * @template T
+ * @param {T} object
+ * @returns {object is Object}
+ */
+const isPlainObject = (object) =>
+  ({}).toString.call(object) === '[object Object]';
+
 class PDFObject {
+  /**
+   *
+   * @param {unknown} object
+   * @returns {string | number}
+   */
   static convert(object) {
     // String literals are converted to the PDF name type
     if (typeof object === 'string') {
@@ -92,7 +105,7 @@ class PDFObject {
       return `[${items}]`;
     }
 
-    if ({}.toString.call(object) === '[object Object]') {
+    if (isPlainObject(object)) {
       const out = ['<<'];
       for (let key in object) {
         const val = object[key];

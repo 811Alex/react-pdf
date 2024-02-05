@@ -1,44 +1,46 @@
 import { evolve, matchPercent } from '@react-pdf/fns';
 
 /**
- * @typedef {Function} ResolvePageHorizontalPadding
- * @param {string} value padding value
- * @returns {Object} translated padding value
+ * @typedef {import('../types.js').Page} Page
  */
 
 /**
  * Translates page percentage horizontal paddings in fixed ones
  *
  * @param {Object} container page container
- * @returns {ResolvePageHorizontalPadding} resolve page horizontal padding
  */
-const resolvePageHorizontalPadding = (container) => (value) => {
-  const match = matchPercent(value);
-  return match ? match.percent * container.width : value;
+const resolvePageHorizontalPadding = (container) => {
+  /**
+   * @param {string} value padding value
+   * @returns {Object} translated padding value
+   */
+  return (value) => {
+    const match = matchPercent(value);
+    return match ? match.percent * container.width : value;
+  };
 };
-
-/**
- * @typedef {Function} ResolvePageVerticalPadding
- * @param {string} padding value
- * @returns {Object} translated padding value
- */
 
 /**
  * Translates page percentage vertical paddings in fixed ones
  *
  * @param {Object} container page container
- * @returns {ResolvePageVerticalPadding} resolve page vertical padding
  */
-const resolvePageVerticalPadding = (container) => (value) => {
-  const match = matchPercent(value);
-  return match ? match.percent * container.height : value;
+const resolvePageVerticalPadding = (container) => {
+  /**
+   * @param {string} value padding value
+   * @returns {Object} translated padding value
+   */
+  return (value) => {
+    const match = matchPercent(value);
+    return match ? match.percent * container.height : value;
+  };
 };
 
 /**
  * Translates page percentage paddings in fixed ones
  *
- * @param {Object} page
- * @returns {Object} page with fixed paddings
+ * @param {Page} page page
+ * @returns {Page} page with fixed paddings
  */
 const resolvePagePaddings = (page) => {
   const container = page.style;

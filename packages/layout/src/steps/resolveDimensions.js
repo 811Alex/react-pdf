@@ -57,6 +57,10 @@ import measureText from '../text/measureText';
 import measureImage from '../image/measureImage';
 import measureCanvas from '../canvas/measureCanvas';
 
+/**
+ * @typedef {import('../types.js').Page} Page
+ */
+
 const isType = (type) => (node) => node.type === type;
 
 const isSvg = isType(P.Svg);
@@ -121,20 +125,19 @@ const setYogaValues = (node) => {
 };
 
 /**
- * @typedef {Function} InsertYogaNodes
- * @param {Object} child child node
- * @returns {Object} node
- */
-
-/**
  * Inserts child into parent' yoga node
  *
  * @param {Object} parent parent
- * @returns {InsertYogaNodes} insert yoga nodes
  */
-const insertYogaNodes = (parent) => (child) => {
-  parent.insertChild(child.yogaNode, parent.getChildCount());
-  return child;
+const insertYogaNodes = (parent) => {
+  /**
+   * @param {Object} child child node
+   * @returns {Object} node
+   */
+  return (child) => {
+    parent.insertChild(child.yogaNode, parent.getChildCount());
+    return child;
+  };
 };
 
 const setMeasureFunc = (node, page, fontStore) => {
@@ -163,43 +166,42 @@ const isLayoutElement = (node) =>
   !isText(node) && !isNote(node) && !isSvg(node);
 
 /**
- * @typedef {Function} CreateYogaNodes
- * @param {Object} node
- * @returns {Object} node with appended yoga node
- */
-
-/**
  * Creates and add yoga node to document tree
  * Handles measure function for text and image nodes
- *
- * @returns {CreateYogaNodes} create yoga nodes
  */
-const createYogaNodes = (page, fontStore, yoga) => (node) => {
-  const yogaNode = yoga.node.create();
+const createYogaNodes = (page, fontStore, yoga) => {
+  /**
+   * @param {Object} node
+   * @returns {Object} node with appended yoga node
+   */
+  return (node) => {
+    const yogaNode = yoga.node.create();
 
-  const result = Object.assign({}, node, { yogaNode });
+    const result = Object.assign({}, node, { yogaNode });
 
-  setYogaValues(result);
+    setYogaValues(result);
 
-  if (isLayoutElement(node) && node.children) {
-    const resolveChild = compose(
-      insertYogaNodes(yogaNode),
-      createYogaNodes(page, fontStore, yoga),
-    );
+    if (isLayoutElement(node) && node.children) {
+      const resolveChild = compose(
+        insertYogaNodes(yogaNode),
+        createYogaNodes(page, fontStore, yoga),
+      );
 
-    result.children = node.children.map(resolveChild);
-  }
+      result.children = node.children.map(resolveChild);
+    }
 
-  setMeasureFunc(result, page, fontStore);
+    setMeasureFunc(result, page, fontStore);
 
-  return result;
+    return result;
+  };
 };
 
 /**
  * Performs yoga calculation
  *
- * @param {Object} page page node
- * @returns {Object} page node
+ * @template {Page} T
+ * @param {T} page page node
+ * @returns {T} page node
  */
 const calculateLayout = (page) => {
   page.yogaNode.calculateLayout();
@@ -266,8 +268,10 @@ const freeYogaNodes = (node) => {
  * Takes node values from 'box' and 'style' attributes, and persist them back into 'box'
  * Destroy yoga values at the end.
  *
- * @param {Object} page object
- * @returns {Object} page object with correct 'box' layout attributes
+ * @param {Page | null | undefined} page object
+ * @param {Object} fontStore font store
+ * @param {Object} yoga yoga instance
+ * @returns {Page} page object with correct 'box' layout attributes
  */
 export const resolvePageDimensions = (page, fontStore, yoga) => {
   if (isNil(page)) return null;

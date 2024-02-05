@@ -1,14 +1,18 @@
 import { vi } from 'vitest';
 
 /**
+ * @typedef {import('../../src/types.js').AttributedString} AttributedString
+ */
+
+/**
  * Test font substitution based on the string 'Lorem'
  * Returns empry if no runs present, or arbitrary font substitution otherwise
  *
  *   L     o     r     e     m
  * |- Courier -|-- Helvetica --|
  *
- * @param {Object}  attributed string
- * @returns {Object} attributed string
+ * @param {AttributedString} string attributed string
+ * @returns {AttributedString} attributed string
  */
 export const fontSubstitutionImpl = vi.fn((string) => {
   const runs =

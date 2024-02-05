@@ -4,6 +4,11 @@ import getMargin from '../node/getMargin';
 import getPadding from '../node/getPadding';
 import isHeightAuto from '../page/isHeightAuto';
 
+/**
+ * @typedef {import('../types.js').Page} Page
+ * @typedef {import('../types.js').Node} Node
+ */
+
 const SAFETY_HEIGHT = 10;
 
 const getMax = (values) => Math.max(-Infinity, ...values);
@@ -95,37 +100,36 @@ const measureCtx = () => {
 };
 
 /**
- * @typedef {Function} MeasureCanvas
- * @returns {{ width: number, height: number }} canvas width and height
- */
-
-/**
  * Yoga canvas measure function
  *
- * @param {Object} page
- * @param {Object} node
- * @returns {MeasureCanvas} measure canvas
+ * @param {Page} page page
+ * @param {Node} node node
  */
-const measureCanvas = (page, node) => () => {
-  const imageMargin = getMargin(node);
-  const pagePadding = getPadding(page);
-  const pageArea = isHeightAuto(page)
-    ? Infinity
-    : page.box.height -
-      pagePadding.paddingTop -
-      pagePadding.paddingBottom -
-      imageMargin.marginTop -
-      imageMargin.marginBottom -
-      SAFETY_HEIGHT;
+const measureCanvas = (page, node) => {
+  /**
+   * @returns {{ width: number, height: number }} canvas width and height
+   */
+  return () => {
+    const imageMargin = getMargin(node);
+    const pagePadding = getPadding(page);
+    const pageArea = isHeightAuto(page)
+      ? Infinity
+      : page.box.height -
+        pagePadding.paddingTop -
+        pagePadding.paddingBottom -
+        imageMargin.marginTop -
+        imageMargin.marginBottom -
+        SAFETY_HEIGHT;
 
-  const ctx = measureCtx();
+    const ctx = measureCtx();
 
-  node.props.paint(ctx);
+    node.props.paint(ctx);
 
-  const width = ctx.getWidth();
-  const height = Math.min(pageArea, ctx.getHeight());
+    const width = ctx.getWidth();
+    const height = Math.min(pageArea, ctx.getHeight());
 
-  return { width, height };
+    return { width, height };
+  };
 };
 
 export default measureCanvas;

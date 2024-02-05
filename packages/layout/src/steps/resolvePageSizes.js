@@ -2,10 +2,14 @@ import { flatten } from '@react-pdf/stylesheet';
 import getPageSize from '../page/getSize';
 
 /**
+ * @typedef {import('../types.js').Page} Page
+ */
+
+/**
  * Resolves page size
  *
- * @param {Object} page
- * @returns {Object} page with resolved size in style attribute
+ * @param {Page} page page
+ * @returns {Page} page with resolved size in style attribute
  */
 export const resolvePageSize = (page) => {
   const size = getPageSize(page);

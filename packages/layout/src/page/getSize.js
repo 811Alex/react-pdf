@@ -1,5 +1,9 @@
 import isLandscape from './isLandscape';
 
+/**
+ * @typedef {import('../types.js').Page} Page
+ */
+
 const PAGE_SIZES = {
   '4A0': [4767.87, 6740.79],
   '2A0': [3370.39, 4767.87],
@@ -103,26 +107,24 @@ const getNumberSize = (n) => toSizeObject([n]);
 /**
  * Return page size in an object { width, height }
  *
- * @param {Object} page instance
+ * @param {Page} page instance
  * @returns {{ width: number, height: number }} size object with width and height
  */
 const getSize = (page) => {
   const value = page.props?.size || 'A4';
   const dpi = parseFloat(page.props?.dpi || 72);
 
-  const type = typeof value;
-
   /**
    * @type {{ width: number, height: number }}
    */
   let size;
 
-  if (type === 'string') {
+  if (typeof value === 'string') {
     size = getStringSize(value);
+  } else if (typeof value === 'number') {
+    size = getNumberSize(value);
   } else if (Array.isArray(value)) {
     size = toSizeObject(value);
-  } else if (type === 'number') {
-    size = getNumberSize(value);
   } else {
     size = value;
   }

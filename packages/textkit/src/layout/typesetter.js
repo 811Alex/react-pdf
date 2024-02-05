@@ -22,7 +22,7 @@ import sliceBlockAtHeight from '../block/sliceAtHeight';
  */
 const typesetter = (engines, options, container) => {
   /**
-   * @param {AttributedString} attributedStrings attributed strings (paragraphs)
+   * @param {AttributedString[]} attributedStrings attributed strings (paragraphs)
    * @returns {Object[]} paragraph blocks
    */
   return (attributedStrings) => {

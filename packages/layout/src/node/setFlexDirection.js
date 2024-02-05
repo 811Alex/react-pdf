@@ -7,26 +7,25 @@ const FLEX_DIRECTIONS = {
 };
 
 /**
- * @typedef {Function} NodeInstanceWrapper
- * @param {Object} node node instance
- * @returns {Object} node instance
- */
-
-/**
  * Set flex direction attribute to node's Yoga instance
  *
  * @param {string} value flex direction value
- * @returns {NodeInstanceWrapper} node instance wrapper
  */
-const setFlexDirection = (value) => (node) => {
-  const { yogaNode } = node;
+const setFlexDirection = (value) => {
+  /**
+   * @param {Object} node node instance
+   * @returns {Object} node instance
+   */
+  return (node) => {
+    const { yogaNode } = node;
 
-  if (yogaNode) {
-    const flexDirection = FLEX_DIRECTIONS[value] || Yoga.FlexDirection.Column;
-    yogaNode.setFlexDirection(flexDirection);
-  }
+    if (yogaNode) {
+      const flexDirection = FLEX_DIRECTIONS[value] || Yoga.FlexDirection.Column;
+      yogaNode.setFlexDirection(flexDirection);
+    }
 
-  return node;
+    return node;
+  };
 };
 
 export default setFlexDirection;

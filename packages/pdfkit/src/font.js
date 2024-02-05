@@ -3,6 +3,11 @@ import createStandardFont from './font/standard';
 import createEmbeddedFont from './font/embedded';
 
 export class PDFFont {
+  ascender;
+  descender;
+  document;
+  lineGap;
+
   static open(document, src, family, id) {
     let font;
 

@@ -69,12 +69,6 @@
  */
 
 /**
- * @typedef {Object} Fragment
- * @property {string} string
- * @property {Attributes} [attributes]
- */
-
-/**
  * @typedef {Object} Glyph
  * @property {number} [id]
  * @property {number} [advanceWidth]
@@ -82,7 +76,40 @@
  */
 
 /**
- * @typedef {['start' | 'end', number, Attributes, number]} Point
+ * @typedef {Object} Node
+ * @property {number} [alignOffset]
+ * @property {Object[]} [lines]
+ * @property {NodeProps} [props]
+ * @property {import("@react-pdf/types").Style} [style]
+ * @property {string} [type]
+ */
+
+/**
+ * @typedef {Object} NodeProps
+ */
+
+/**
+ * @typedef {Object} Page
+ * @property {Node[]} [children]
+ * @property {PageBox} [box]
+ * @property {PageProps} [props]
+ * @property {Object} [yogaNode]
+ * @property {import("@react-pdf/types").Style} [style]
+ */
+
+/**
+ * @typedef {Object} PageBox
+ * @property {number} [x]
+ * @property {number} [y]
+ * @property {number} [width]
+ * @property {number} [height]
+ */
+
+/**
+ * @typedef {Object} PageProps
+ * @property {string | number} [dpi]
+ * @property {'portrait' | 'landscape'} [orientation]
+ * @property {string} [size]
  */
 
 /**
@@ -100,8 +127,8 @@
  * @property {number} y
  * @property {number} width
  * @property {number} height
- * @property {number} [maxLines]
- * @property {string} [truncateMode]
+ * @property {number} maxLines
+ * @property {string} truncateMode
  */
 
 /**

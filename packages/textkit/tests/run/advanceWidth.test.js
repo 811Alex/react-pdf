@@ -31,7 +31,6 @@ describe('run advanceWidth operator', () => {
     ];
     const run = { start: 5, end: 15, attributes: {}, positions };
 
-    // @ts-expect-error - intentionally invalid argument
     expect(advanceWidth(run)).toBe(30);
   });
 });

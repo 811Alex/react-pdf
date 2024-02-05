@@ -107,7 +107,7 @@ export default {
    * nodes in a PDF form that are used to specify form name heirarchy and form
    * value defaults.
    * @param {string} name - field name (T attribute in field dictionary)
-   * @param {object} options  - other attributes to include in field dictionary
+   * @param {Object} options  - other attributes to include in field dictionary
    */
   formField(name, options = {}) {
     let fieldDict = this._fieldDict(name, null, options);
@@ -125,7 +125,7 @@ export default {
    * @param {number} y
    * @param {number} w
    * @param {number} h
-   * @param {object} options
+   * @param {Object} options
    */
   formAnnotation(name, type, x, y, w, h, options = {}) {
     let fieldDict = this._fieldDict(name, type, options);
@@ -141,30 +141,81 @@ export default {
     return this._addToParent(annotRef);
   },
 
+  /**
+   * @param {string} name
+   * @param {number} x
+   * @param {number} y
+   * @param {number} w
+   * @param {number} h
+   * @param {Object} options
+   */
   formText(name, x, y, w, h, options = {}) {
     return this.formAnnotation(name, 'text', x, y, w, h, options);
   },
 
+  /**
+   * @param {string} name
+   * @param {number} x
+   * @param {number} y
+   * @param {number} w
+   * @param {number} h
+   * @param {Object} options
+   */
   formPushButton(name, x, y, w, h, options = {}) {
     return this.formAnnotation(name, 'pushButton', x, y, w, h, options);
   },
 
+  /**
+   * @param {string} name
+   * @param {number} x
+   * @param {number} y
+   * @param {number} w
+   * @param {number} h
+   * @param {Object} options
+   */
   formCombo(name, x, y, w, h, options = {}) {
     return this.formAnnotation(name, 'combo', x, y, w, h, options);
   },
 
+  /**
+   * @param {string} name
+   * @param {number} x
+   * @param {number} y
+   * @param {number} w
+   * @param {number} h
+   * @param {Object} options
+   */
   formList(name, x, y, w, h, options = {}) {
     return this.formAnnotation(name, 'list', x, y, w, h, options);
   },
 
+  /**
+   * @param {string} name
+   * @param {number} x
+   * @param {number} y
+   * @param {number} w
+   * @param {number} h
+   * @param {Object} options
+   */
   formRadioButton(name, x, y, w, h, options = {}) {
     return this.formAnnotation(name, 'radioButton', x, y, w, h, options);
   },
 
+  /**
+   * @param {string} name
+   * @param {number} x
+   * @param {number} y
+   * @param {number} w
+   * @param {number} h
+   * @param {Object} options
+   */
   formCheckbox(name, x, y, w, h, options = {}) {
     return this.formAnnotation(name, 'checkbox', x, y, w, h, options);
   },
 
+  /**
+   * @param {Object} fieldRef
+   */
   _addToParent(fieldRef) {
     let parent = fieldRef.data.Parent;
     if (parent) {
@@ -178,6 +229,12 @@ export default {
     return this;
   },
 
+  /**
+   * @param {string} name
+   * @param {string} type
+   * @param {Object} options
+   * @returns {Object} field dictionary
+   */
   _fieldDict(name, type, options = {}) {
     if (!this._acroform) {
       throw new Error(

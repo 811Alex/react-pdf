@@ -3,12 +3,6 @@ import * as Yoga from 'yoga-layout';
 import setYogaValue from './setYogaValue';
 
 /**
- * @typedef {Function} NodeInstanceWrapper
- * @param {Object} node node instance
- * @returns {Object} node instance
- */
-
-/**
  * Set margin top attribute to node's Yoga instance
  *
  * @param {number} margin margin top
@@ -48,15 +42,20 @@ export const setMarginLeft = setYogaValue('margin', Yoga.Edge.Left);
  * Set all margins at once
  *
  * @param {number | string} margin margin
- * @returns {NodeInstanceWrapper} node instance wrapper
  */
-export const setMargin = (margin) => (node) => {
-  setMarginTop(margin)(node);
-  setMarginRight(margin)(node);
-  setMarginBottom(margin)(node);
-  setMarginLeft(margin)(node);
+export const setMargin = (margin) => {
+  /**
+   * @param {Object} node node instance
+   * @returns {Object} node instance
+   */
+  return (node) => {
+    setMarginTop(margin)(node);
+    setMarginRight(margin)(node);
+    setMarginBottom(margin)(node);
+    setMarginLeft(margin)(node);
 
-  return node;
+    return node;
+  };
 };
 
 export default setMargin;

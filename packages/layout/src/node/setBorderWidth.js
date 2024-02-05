@@ -3,12 +3,6 @@ import * as Yoga from 'yoga-layout';
 import setYogaValue from './setYogaValue';
 
 /**
- * @typedef {Function} NodeInstanceWrapper
- * @param {Object} node node instance
- * @returns {Object} node instance
- */
-
-/**
  * Set border top attribute to node's Yoga instance
  *
  * @param {number} border border top width
@@ -48,15 +42,20 @@ export const setBorderLeft = setYogaValue('border', Yoga.Edge.Left);
  * Set all border widths at once
  *
  * @param {number | string} width border width
- * @returns {NodeInstanceWrapper} node instance wrapper
  */
-export const setBorder = (width) => (node) => {
-  setBorderTop(width)(node);
-  setBorderRight(width)(node);
-  setBorderBottom(width)(node);
-  setBorderLeft(width)(node);
+export const setBorder = (width) => {
+  /**
+   * @param {Object} node node instance
+   * @returns {Object} node instance
+   */
+  return (node) => {
+    setBorderTop(width)(node);
+    setBorderRight(width)(node);
+    setBorderBottom(width)(node);
+    setBorderLeft(width)(node);
 
-  return node;
+    return node;
+  };
 };
 
 export default setBorder;

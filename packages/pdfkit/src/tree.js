@@ -49,15 +49,27 @@ class PDFTree {
     return out.join('\n');
   }
 
-  _compareKeys() {
+  /**
+   * @param {string} a
+   * @param {string} b
+   * @returns {number}
+   */
+  _compareKeys(a, b) {
     throw new Error('Must be implemented by subclasses');
   }
 
+  /**
+   * @returns {string}
+   */
   _keysName() {
     throw new Error('Must be implemented by subclasses');
   }
 
-  _dataForKey() {
+  /**
+   * @param {string} k
+   * @returns {String | number}
+   */
+  _dataForKey(k) {
     throw new Error('Must be implemented by subclasses');
   }
 }

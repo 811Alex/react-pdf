@@ -12,12 +12,12 @@ import stringFromCodePoints from '../utils/stringFromCodePoints';
 /**
  * Append glyph into last run of attributed string
  *
- * @param {Glyph} glyph glyph
+ * @param {Glyph | number | undefined} glyph glyph
  * @param {AttributedString} attributedString attributed string
  * @returns {AttributedString} attributed string with new glyph
  */
 const append = (glyph, attributedString) => {
-  const codePoints = glyph?.codePoints || [];
+  const codePoints = typeof glyph === 'number' ? [] : glyph?.codePoints || [];
   const codePointsString = stringFromCodePoints(codePoints);
   const string = attributedString.string + codePointsString;
 

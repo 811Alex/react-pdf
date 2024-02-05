@@ -2,7 +2,7 @@
  * Casts value to array
  *
  * @template T
- * @param {T|T[]} value value
+ * @param {T | T[]} value value
  * @returns {T[]} array
  */
 const castArray = (value) => {

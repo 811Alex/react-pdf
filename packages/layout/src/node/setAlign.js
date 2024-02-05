@@ -12,34 +12,33 @@ const ALIGN = {
 };
 
 /**
- * @typedef {Function} NodeInstanceWrapper
- * @param {Object} node node instance
- * @returns {Object} node instance
- */
-
-/**
- * @typedef {Function} AlignSetter
- * @param {string} value align value
- * @returns {NodeInstanceWrapper} node instance wrapper
- */
-
-/**
  * Set generic align attribute to node's Yoga instance
  *
  * @param {string} attr specific align property
- * @returns {AlignSetter} align setter
  */
-const setAlign = (attr) => (value) => (node) => {
-  const { yogaNode } = node;
-  const defaultValue = attr === 'items' ? Yoga.Align.Stretch : Yoga.Align.Auto;
+const setAlign = (attr) => {
+  /**
+   * @param {string} value align value
+   */
+  return (value) => {
+    /**
+     * @param {Object} node node instance
+     * @returns {Object} node instance
+     */
+    return (node) => {
+      const { yogaNode } = node;
+      const defaultValue =
+        attr === 'items' ? Yoga.Align.Stretch : Yoga.Align.Auto;
 
-  if (yogaNode) {
-    const align = ALIGN[value] || defaultValue;
+      if (yogaNode) {
+        const align = ALIGN[value] || defaultValue;
 
-    yogaNode[`setAlign${upperFirst(attr)}`](align);
-  }
+        yogaNode[`setAlign${upperFirst(attr)}`](align);
+      }
 
-  return node;
+      return node;
+    };
+  };
 };
 
 export default setAlign;

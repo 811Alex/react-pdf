@@ -1,28 +1,31 @@
 import * as Yoga from 'yoga-layout';
 
+/**
+ * @typedef {import('../types.js').Page} Page
+ * @typedef {import('../types.js').Node} Node
+ */
+
 const getAspectRatio = (viewbox) => {
   if (!viewbox) return null;
   return (viewbox.maxX - viewbox.minX) / (viewbox.maxY - viewbox.minY);
 };
 
 /**
- * @typedef {Function} MeasureSvg
- * @param {number} width
- * @param {number} widthMode
- * @param {number} height
- * @param {number} heightMode
- * @returns {{ width: number, height: number }} svg width and height
- */
-
-/**
  * Yoga svg measure function
  *
- * @param {Object} page
- * @param {Object} node
- * @returns {MeasureSvg} measure svg
+ * @param {Page} page page
+ * @param {Node} node node
  */
-const measureCanvas =
-  (page, node) => (width, widthMode, height, heightMode) => {
+const measureCanvas = (page, node) => {
+  /**
+   * @typedef {Function} MeasureSvg
+   * @param {number} width
+   * @param {number} widthMode
+   * @param {number} height
+   * @param {number} heightMode
+   * @returns {{ width?: number, height?: number }} svg width and height
+   */
+  return (width, widthMode, height, heightMode) => {
     const aspectRatio = getAspectRatio(node.props.viewBox) || 1;
 
     if (
@@ -38,5 +41,6 @@ const measureCanvas =
 
     return {};
   };
+};
 
 export default measureCanvas;

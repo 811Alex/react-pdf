@@ -6,6 +6,11 @@ import layoutEngine, {
   textDecoration,
 } from '@react-pdf/textkit';
 
+/**
+ * @typedef {import('../types.js').Node} Node
+ * @typedef {import('../types.js').Rect} Rect
+ */
+
 import fontSubstitution from './fontSubstitution';
 import getAttributedString from './getAttributedString';
 
@@ -20,8 +25,16 @@ const engines = {
 
 const engine = layoutEngine(engines);
 
+/**
+ * @param {Object} node
+ * @returns {number}
+ */
 const getMaxLines = (node) => node.style?.maxLines;
 
+/**
+ * @param {Object} node
+ * @returns {string}
+ */
 const getTextOverflow = (node) => node.style?.textOverflow;
 
 /**
@@ -30,7 +43,7 @@ const getTextOverflow = (node) => node.style?.textOverflow;
  * @param {number} width
  * @param {number} height
  * @param {Object} node
- * @returns {Object} layout container
+ * @returns {Rect} layout container
  */
 const getContainer = (width, height, node) => {
   const maxLines = getMaxLines(node);
@@ -64,7 +77,7 @@ const getLayoutOptions = (fontStore, node) => ({
 /**
  * Get text lines for given node
  *
- * @param {Object} node node
+ * @param {Node} node node
  * @param {number} width container width
  * @param {number} height container height
  * @param {number} fontStore font store

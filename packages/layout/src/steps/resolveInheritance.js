@@ -54,20 +54,19 @@ const merge = (inheritedStyles, style) => {
 };
 
 /**
- * @typedef {Function} MergeStyles
- * @param {Object} node
- * @returns {Object} node with styles merged
- */
-
-/**
  * Merges styles with node
  *
  * @param {Object} inheritedStyles style object
- * @returns {MergeStyles} merge styles function
  */
-const mergeStyles = (inheritedStyles) => (node) => {
-  const style = merge(inheritedStyles, node.style || {});
-  return Object.assign({}, node, { style });
+const mergeStyles = (inheritedStyles) => {
+  /**
+   * @param {Object} node
+   * @returns {Object} node with styles merged
+   */
+  return (node) => {
+    const style = merge(inheritedStyles, node.style || {});
+    return Object.assign({}, node, { style });
+  };
 };
 
 /**

@@ -2,6 +2,10 @@ import { last } from '@react-pdf/fns';
 
 import StandardFont from './standardFont';
 
+/**
+ * @typedef {import('../types.js').AttributedString} AttributedString
+ */
+
 const fontCache = {};
 
 const IGNORED_CODE_POINTS = [173];
@@ -25,9 +29,11 @@ const shouldFallbackToFont = (codePoint, font) =>
     !font.hasGlyphForCodePoint(codePoint) &&
     getFallbackFont().hasGlyphForCodePoint(codePoint));
 
-const fontSubstitution =
-  () =>
-  ({ string, runs }) => {
+const fontSubstitution = () => {
+  /**
+   * @param {AttributedString} attributedString
+   */
+  return ({ string, runs }) => {
     let lastFont = null;
     let lastFontSize = null;
     let lastIndex = 0;
@@ -52,7 +58,7 @@ const fontSubstitution =
 
       for (let j = 0; j < chars.length; j += 1) {
         const char = chars[j];
-        const codePoint = char.codePointAt();
+        const codePoint = char.codePointAt(0);
         const shouldFallback = shouldFallbackToFont(codePoint, defaultFont);
         // If the default font does not have a glyph and the fallback font does, we use it
         const font = shouldFallback ? getFallbackFont() : defaultFont;
@@ -99,5 +105,6 @@ const fontSubstitution =
 
     return { string, runs: res };
   };
+};
 
 export default fontSubstitution;

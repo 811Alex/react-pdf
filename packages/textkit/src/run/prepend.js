@@ -35,7 +35,7 @@ const prependGlyph = (glyph, run) => {
 /**
  * Prepend glyph or code point on run
  *
- * @param {Glyph | number} value glyph or codePoint
+ * @param {Glyph | number | undefined} value glyph or codePoint
  * @param {Run} run run
  * @returns {Run} run with glyph
  */

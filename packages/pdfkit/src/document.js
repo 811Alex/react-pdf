@@ -18,6 +18,8 @@ import MetadataMixin from './mixins/metadata';
 import capitalize from './utils/capitalize';
 
 class PDFDocument extends stream.Readable {
+  _fontFamilies;
+
   constructor(options = {}) {
     super();
     this.options = options;

@@ -118,6 +118,9 @@ export default {
   },
 
   _doOpacity(fillOpacity, strokeOpacity) {
+    /**
+     * @type {Object}
+     */
     let dictionary;
     let name;
     if (fillOpacity == null && strokeOpacity == null) {

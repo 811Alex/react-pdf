@@ -1,7 +1,11 @@
 /**
+ * @typedef {import('../types.js').Node} Node
+ */
+
+/**
  * Get image source
  *
- * @param {Object} node image node
+ * @param {Node} node image node
  * @returns {string | Object} image src
  */
 const getSource = (node) =>

@@ -22,8 +22,9 @@ describe('FontSubstitution', () => {
   });
 
   test('should merge consecutive runs with same font', () => {
-    const run1 = { start: 0, end: 3, attributes: { font: 'Helvetica' } };
-    const run2 = { start: 3, end: 5, attributes: { font: 'Helvetica' } };
+    const font1 = {};
+    const run1 = { start: 0, end: 3, attributes: { font: font1 } };
+    const run2 = { start: 3, end: 5, attributes: { font: font1 } };
     const string = instance({ string: 'Lorem', runs: [run1, run2] });
 
     expect(string).toHaveProperty('string', 'Lorem');
@@ -33,8 +34,10 @@ describe('FontSubstitution', () => {
   });
 
   test('should substitute many runs', () => {
-    const run1 = { start: 0, end: 3, attributes: { font: 'Courier' } };
-    const run2 = { start: 3, end: 5, attributes: { font: 'Helvetica' } };
+    const font1 = {};
+    const font2 = {};
+    const run1 = { start: 0, end: 3, attributes: { font: font1 } };
+    const run2 = { start: 3, end: 5, attributes: { font: font2 } };
     const string = instance({ string: 'Lorem', runs: [run1, run2] });
 
     expect(string).toHaveProperty('string', 'Lorem');

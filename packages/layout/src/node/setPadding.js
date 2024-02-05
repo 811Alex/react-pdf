@@ -3,12 +3,6 @@ import * as Yoga from 'yoga-layout';
 import setYogaValue from './setYogaValue';
 
 /**
- * @typedef {Function} NodeInstanceWrapper
- * @param {Object} node node instance
- * @returns {Object} node instance
- */
-
-/**
  * Set padding top attribute to node's Yoga instance
  *
  * @param {number} padding padding top
@@ -48,15 +42,20 @@ export const setPaddingLeft = setYogaValue('padding', Yoga.Edge.Left);
  * Set all paddings at once
  *
  * @param {number | string} padding padding
- * @returns {NodeInstanceWrapper} node instance wrapper
  */
-export const setPadding = (padding) => (node) => {
-  setPaddingTop(padding)(node);
-  setPaddingRight(padding)(node);
-  setPaddingBottom(padding)(node);
-  setPaddingLeft(padding)(node);
+export const setPadding = (padding) => {
+  /**
+   * @param {Object} node node instance
+   * @returns {Object} node instance
+   */
+  return (node) => {
+    setPaddingTop(padding)(node);
+    setPaddingRight(padding)(node);
+    setPaddingBottom(padding)(node);
+    setPaddingLeft(padding)(node);
 
-  return node;
+    return node;
+  };
 };
 
 export default setPadding;

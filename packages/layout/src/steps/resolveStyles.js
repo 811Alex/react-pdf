@@ -1,6 +1,15 @@
 import * as P from '@react-pdf/primitives';
 import stylesheet from '@react-pdf/stylesheet';
 
+/**
+ * @typedef {import('../types.js').Page} Page
+ * @typedef {import('../types.js').Node} Node
+ */
+
+/**
+ * @param {Node} node node
+ * @returns {boolean}
+ */
 const isLink = (node) => node.type === P.Link;
 
 const DEFAULT_LINK_STYLES = {
@@ -12,7 +21,7 @@ const DEFAULT_LINK_STYLES = {
  * Computes styles using stylesheet
  *
  * @param {Object} container
- * @param {Object} node document node
+ * @param {Node} node document node
  * @returns {Object} computed styles
  */
 const computeStyle = (container, node) => {
@@ -28,31 +37,30 @@ const computeStyle = (container, node) => {
 };
 
 /**
- * @typedef {Function} ResolveNodeStyles
- * @param {Object} node document node
- * @returns {Object} node (and subnodes) with resolved styles
- */
-
-/**
  * Resolves node styles
  *
  * @param {Object} container
- * @returns {ResolveNodeStyles} resolve node styles
  */
-const resolveNodeStyles = (container) => (node) => {
-  const style = computeStyle(container, node);
+const resolveNodeStyles = (container) => {
+  /**
+   * @param {Object} node document node
+   * @returns {Object} node (and subnodes) with resolved styles
+   */
+  return (node) => {
+    const style = computeStyle(container, node);
 
-  if (!node.children) return Object.assign({}, node, { style });
+    if (!node.children) return Object.assign({}, node, { style });
 
-  const children = node.children.map(resolveNodeStyles(container));
+    const children = node.children.map(resolveNodeStyles(container));
 
-  return Object.assign({}, node, { style, children });
+    return Object.assign({}, node, { style, children });
+  };
 };
 
 /**
  * Resolves page styles
  *
- * @param {Object} page document page
+ * @param {Page} page page
  * @returns {Object} document page with resolved styles
  */
 const resolvePageStyles = (page) => {

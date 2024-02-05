@@ -13,7 +13,7 @@ import stringFromCodePoints from '../utils/stringFromCodePoints';
  * Insert glyph into attributed string
  *
  * @param {number} index index
- * @param {Glyph} glyph glyph
+ * @param {Glyph | number} glyph glyph
  * @param {AttributedString} attributedString attributed string
  * @returns {AttributedString} attributed string with new glyph
  */
@@ -23,7 +23,7 @@ const insertGlyph = (index, glyph, attributedString) => {
   // Add glyph to the end if run index invalid
   if (runIndex === -1) return append(glyph, attributedString);
 
-  const codePoints = glyph?.codePoints || [];
+  const codePoints = typeof glyph === 'number' ? [] : glyph?.codePoints || [];
 
   const string =
     attributedString.string.slice(0, index) +

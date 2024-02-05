@@ -3,21 +3,17 @@
 import reverse from './reverse';
 
 /**
- * @typedef {Function} Compose
- * @param {any} value
- * @param {...any} args
- * @returns {any} result
- */
-
-/**
  * Performs right-to-left function composition
  *
  * @param {...Function} fns functions
- * @returns {Compose} composed function
  */
-const compose =
-  (...fns) =>
-  (value, ...args) => {
+const compose = (...fns) => {
+  /**
+   * @param {any} value
+   * @param {...any} args
+   * @returns {any} result
+   */
+  return (value, ...args) => {
     let result = value;
     const reversedFns = reverse(fns);
 
@@ -28,5 +24,6 @@ const compose =
 
     return result;
   };
+};
 
 export default compose;

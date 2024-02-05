@@ -7,6 +7,11 @@ const COLOR_SPACE_MAP = {
 };
 
 class JPEG {
+  bits;
+  colorSpace;
+  height;
+  width;
+
   constructor(data, label) {
     this.data = data;
     this.label = label;

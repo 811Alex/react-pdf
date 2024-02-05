@@ -10,26 +10,25 @@ const JUSTIFY_CONTENT = {
 };
 
 /**
- * @typedef {Function} NodeInstanceWrapper
- * @param {Object} node node instance
- * @returns {Object} node instance
- */
-
-/**
  * Set justify content attribute to node's Yoga instance
  *
  * @param {string} value justify content value
- * @returns {NodeInstanceWrapper} node instance wrapper
  */
-const setJustifyContent = (value) => (node) => {
-  const { yogaNode } = node;
+const setJustifyContent = (value) => {
+  /**
+   * @param {Object} node node instance
+   * @returns {Object} node instance
+   */
+  return (node) => {
+    const { yogaNode } = node;
 
-  if (!isNil(value) && yogaNode) {
-    const justifyContent = JUSTIFY_CONTENT[value] || Yoga.Justify.FlexStart;
-    yogaNode.setJustifyContent(justifyContent);
-  }
+    if (!isNil(value) && yogaNode) {
+      const justifyContent = JUSTIFY_CONTENT[value] || Yoga.Justify.FlexStart;
+      yogaNode.setJustifyContent(justifyContent);
+    }
 
-  return node;
+    return node;
+  };
 };
 
 export default setJustifyContent;

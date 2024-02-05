@@ -7,7 +7,7 @@ import isWhiteSpace from '../glyph/isWhiteSpace';
 
 /**
  * @template T
- * @param {T[]} array
+ * @param {T[]} array array
  * @returns {T[]} reversed array
  */
 const reverse = (array) => {

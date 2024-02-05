@@ -29,7 +29,7 @@ const scriptItemizer = () => {
     for (let i = 0; i < string.length; i += 1) {
       const char = string[i];
 
-      const codePoint = char.codePointAt();
+      const codePoint = char.codePointAt(0);
       const script = unicode.getScript(codePoint);
 
       if (script !== lastScript && !ignoredScripts.includes(script)) {

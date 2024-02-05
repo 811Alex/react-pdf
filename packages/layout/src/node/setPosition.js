@@ -3,12 +3,6 @@ import * as Yoga from 'yoga-layout';
 import setYogaValue from './setYogaValue';
 
 /**
- * @typedef {Function} NodeInstanceWrapper
- * @param {Object} node node instance
- * @returns {Object} node instance
- */
-
-/**
  * Set position top attribute to node's Yoga instance
  *
  * @param {number} position position top
@@ -48,15 +42,20 @@ export const setPositionLeft = setYogaValue('position', Yoga.Edge.Left);
  * Set all positions at once
  *
  * @param {number | string} position position
- * @returns {NodeInstanceWrapper} node instance wrapper
  */
-export const setPosition = (position) => (node) => {
-  setPositionTop(position)(node);
-  setPositionRight(position)(node);
-  setPositionBottom(position)(node);
-  setPositionLeft(position)(node);
+export const setPosition = (position) => {
+  /**
+   * @param {Object} node node instance
+   * @returns {Object} node instance
+   */
+  return (node) => {
+    setPositionTop(position)(node);
+    setPositionRight(position)(node);
+    setPositionBottom(position)(node);
+    setPositionLeft(position)(node);
 
-  return node;
+    return node;
+  };
 };
 
 export default setPosition;

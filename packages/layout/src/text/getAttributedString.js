@@ -5,6 +5,10 @@ import ignoreChars from './ignoreChars';
 import fromFragments from './fromFragments';
 import transformText from './transformText';
 
+/**
+ * @typedef {import('../types.js').AttributedString} AttributedString
+ */
+
 const PREPROCESSORS = [ignoreChars, embedEmojis];
 
 const isImage = (node) => node.type === P.Image;
@@ -116,7 +120,7 @@ const getFragments = (fontStore, instance, parentLink, level = 0) => {
  *
  * @param {Object} fontStore font store
  * @param {Object} instance node
- * @returns {Object} attributed string
+ * @returns {AttributedString} attributed string
  */
 const getAttributedString = (fontStore, instance) => {
   const fragments = getFragments(fontStore, instance);

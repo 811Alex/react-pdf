@@ -1,10 +1,14 @@
 const VALID_ORIENTATIONS = ['portrait', 'landscape'];
 
 /**
+ * @typedef {import('../types.js').Page} Page
+ */
+
+/**
  * Get page orientation. Defaults to portrait
  *
- * @param {Object} page object
- * @returns {string} page orientation
+ * @param {Page} page object
+ * @returns {'portrait' | 'landscape'} page orientation
  */
 const getOrientation = (page) => {
   const value = page.props?.orientation || 'portrait';

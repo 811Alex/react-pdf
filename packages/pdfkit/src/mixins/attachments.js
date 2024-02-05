@@ -10,7 +10,7 @@ export default {
   /**
    * Embed contents of `src` in PDF
    * @param {Buffer | ArrayBuffer | string} src input Buffer, ArrayBuffer, base64 encoded string or path to file
-   * @param {object} options
+   * @param {Object} options
    *  * options.name: filename to be shown in PDF, will use `src` if none set
    *  * options.type: filetype to be shown in PDF
    *  * options.description: description to be shown in PDF
