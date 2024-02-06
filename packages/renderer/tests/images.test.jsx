@@ -15,6 +15,7 @@ const Orientation5 = fs.readFileSync(`${__dirname}/images/orientation-5.jpeg`);
 const Orientation6 = fs.readFileSync(`${__dirname}/images/orientation-6.jpeg`);
 const Orientation7 = fs.readFileSync(`${__dirname}/images/orientation-7.jpeg`);
 const Orientation8 = fs.readFileSync(`${__dirname}/images/orientation-8.jpeg`);
+const Interlaced = fs.readFileSync(`${__dirname}/images/interlaced.png`);
 
 const mount = async (children) => {
   const image = await renderToImage(
@@ -39,6 +40,14 @@ describe('Image', () => {
         <Image src={Orientation7} style={{ width: 220, margin: 5 }} />
         <Image src={Orientation8} style={{ width: 220, margin: 5 }} />
       </View>,
+    );
+
+    expect(image).toMatchImageSnapshot();
+  });
+
+  test('should render interlaced png', async () => {
+    const image = await mount(
+      <Image src={Interlaced} style={{ width: 200 }} />,
     );
 
     expect(image).toMatchImageSnapshot();
