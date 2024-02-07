@@ -1,11 +1,11 @@
-import PNG from '@react-pdf/png-js';
+import { PNG } from 'pngjs';
 
-PNG.isValid = function isValid(data) {
+PNG.sync.read.isValid = function isValid(data) {
   try {
-    return !!new PNG(data);
+    return !!new PNG.sync.read(data);
   } catch (e) {
     return false;
   }
 };
 
-export default PNG;
+export default PNG.sync.read;
